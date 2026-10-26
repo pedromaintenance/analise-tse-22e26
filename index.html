@@ -23,7 +23,9 @@
     if(!original.startsWith('<!doctype html>')||!original.endsWith('</body></html>'))throw new Error('Pacote incompleto.');
     const url=URL.createObjectURL(new Blob([original],{type:'text/html;charset=utf-8'}));
     const tag='<a download="Observatorio_Brasil_2026_Standalone.html" href="'+url+'" title="Baixar o HTML completo para abrir sem internet" style="position:fixed;z-index:2147483640;bottom:13px;right:13px;background:#f5c84c;color:#153a2b;border:1px solid #153a2b;border-radius:9px;padding:10px 14px;box-shadow:0 6px 20px #0007;font:700 12px system-ui;text-decoration:none">↓ Baixar versão offline</a>';
-    const output=original.replace(/<\/body>\s*<\/html>\s*$/i,tag+'</body></html>');
+    const mobileStyles="<style id=\"mobile-chart-fix\">\n@media(max-width:767px){\nhtml,body{max-width:100%!important;overflow-x:hidden!important}\n.grid-2:has(#ufGainChart){display:grid!important;grid-template-columns:minmax(0,1fr)!important;width:100%!important;min-width:0!important}\n.grid-2:has(#ufGainChart)>div,.grid-2:has(#ufGainChart)>aside{width:100%!important;max-width:100%!important;min-width:0!important}\n#ufGainChart{max-width:100%!important;min-width:0!important;width:100%!important}\n#ufGainChart .svg-container{max-width:100%!important}\n#focusBox{border-left:0!important;border-top:1px solid #456b5c!important;border-radius:0!important}\n#focusBox .panel-body{padding:14px!important}\n#focusBox .big{font-size:clamp(32px,9vw,54px)!important}\n.js-plotly-plot,.js-plotly-plot .plot-container,.js-plotly-plot .svg-container{touch-action:pan-y!important}\n.js-plotly-plot .draglayer,.js-plotly-plot .zoomlayer,.js-plotly-plot .nsewdrag,.js-plotly-plot .modebar,.js-plotly-plot .hoverlayer{pointer-events:none!important}\n}\n</style>";
+    const responsiveHTML=original.replace('</head>',mobileStyles+'</head>');
+    const output=responsiveHTML.replace(/<\/body>\s*<\/html>\s*$/i,tag+'</body></html>');
     document.open();document.write(output);document.close();
   }catch(error){status.textContent='Erro ao carregar: '+String(error.message)+' — confira a ativação do GitHub Pages e o acesso aos arquivos do repositório.';console.error(error)}
 })();
