@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Observatório Brasil 2026 — Eleições 2022–2026</title><meta name="theme-color" content="#0b3027">
+<style>html,body{margin:0;background:#09251e;color:#f2f1e5;font-family:system-ui,sans-serif;min-height:100%}.shell{max-width:780px;margin:12vh auto;padding:28px}.tag{letter-spacing:.13em;color:#facb57;font-size:12px;font-weight:bold}.card{padding:36px;border:1px solid #315946;border-radius:22px;background:linear-gradient(125deg,#123e2f,#0a2c24)}h1{font-size:clamp(28px,6vw,50px);margin:20px 0}p{line-height:1.6;color:#b7d5c6}progress{accent-color:#f4c84e;width:100%;height:12px}.links{margin-top:20px}a{color:#facb57}</style>
+</head><body><main class="shell"><section class="card"><div class="tag">OBSERVATÓRIO BRASIL · 2022–2026</div>
+<h1>Carregando estudo eleitoral...</h1><p id="status">Preparando dados e visualizações.</p>
+<progress id="bar" value="0" max="18"></progress>
+<p class="links">Os arquivos deste estudo são públicos e auditáveis no <a href="https://github.com/pedromaintenance/analise-tse-22e26">repositório</a>.</p></section></main>
+<script>
+(async function(){
+  const n=18, root='./payload/', status=document.getElementById('status'),bar=document.getElementById('bar');
+  try{
+    const chunks=Array(n);
+    let done=0;
+    await Promise.all(Array.from({length:n},async(_,i)=>{
+      const name='part-'+String(i).padStart(2,'0')+'.txt';
+      const r=await fetch(root+name,{cache:'force-cache'});
+      if(!r.ok)throw new Error('HTTP '+r.status+' ao ler '+name);
+      chunks[i]=await r.text();
+      bar.value=++done;status.textContent='Carregando módulos: '+done+' de '+n;
+    }));
+    const original=chunks.join('');
+    if(!original.startsWith('<!doctype html>')||!original.endsWith('</body></html>'))throw new Error('Pacote incompleto.');
+    const url=URL.createObjectURL(new Blob([original],{type:'text/html;charset=utf-8'}));
+    const tag='<a download="Observatorio_Brasil_2026_Standalone.html" href="'+url+'" title="Baixar o HTML completo para abrir sem internet" style="position:fixed;z-index:2147483640;bottom:13px;right:13px;background:#f5c84c;color:#153a2b;border:1px solid #153a2b;border-radius:9px;padding:10px 14px;box-shadow:0 6px 20px #0007;font:700 12px system-ui;text-decoration:none">↓ Baixar versão offline</a>';
+    const output=original.replace(/<\/body>\s*<\/html>\s*$/i,tag+'</body></html>');
+    document.open();document.write(output);document.close();
+  }catch(error){status.textContent='Erro ao carregar: '+String(error.message)+' — confira a ativação do GitHub Pages e o acesso aos arquivos do repositório.';console.error(error)}
+})();
+</script></body></html>

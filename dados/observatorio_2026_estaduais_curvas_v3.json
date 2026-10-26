@@ -1,0 +1,4472 @@
+{
+  "meta": {
+    "titulo": "Observatório das Eleições Presidenciais — Brasil 2026",
+    "data_geracao": "2026-10-26",
+    "apuracao_2026_2": "100% das seções",
+    "fontes": [
+      "TSE EA20 6257/6258",
+      "TSE resultados 2022",
+      "Bloomberg Línea resultado 2026 2T por UF 100%",
+      "Urna360 dados 2026 por UF 100%",
+      "Arquivo enviado pelo usuário observatorio_2026_2_BRASIL.json",
+      "Capturas da conversa"
+    ],
+    "nota": "Resultados estaduais finais. Série nacional complementada com pontos observados do histórico publicado no UOL (arredondados a 0,1 p.p.) e registros EA20 arquivados. Lotes incrementais só usam registros com contagens absolutas conhecidas.",
+    "links": [
+      "https://www.tse.jus.br/eleicoes/eleicoes-2026-content/arquivos/divulgacao-de-resultados",
+      "https://urna360.com.br/turnos",
+      "https://www.bloomberglinea.com.br/brasil/resultado-do-2-turno-por-estado-veja-onde-lula-e-flavio-bolsonaro-venceram/",
+      "https://www.tse.jus.br/comunicacao/noticias/2022/Outubro/100-das-secoes-totalizadas-confira-como-ficou-o-quadro-eleitoral-apos-o-1o-turno",
+      "https://www.tse.jus.br/comunicacao/noticias/2022/Outubro/100-das-secoes-totalizadas-confira-como-ficou-o-quadro-eleitoral-apos-o-2o-turno/",
+      "https://noticias.uol.com.br/eleicoes/2026/apuracao/",
+      "https://raw.githubusercontent.com/gabrielandr/apuracao-2026/main/data/historico-6258.json",
+      "https://evolucao-totalizacao.tse.jus.br/"
+    ],
+    "complemento_historico": {
+      "descricao": "Trecho antes ausente 46–92,7% recuperado de registros publicados. Nenhum ponto foi interpolado.",
+      "fonte_percentuais": "https://noticias.uol.com.br/eleicoes/2026/apuracao/",
+      "fonte_votos": "https://raw.githubusercontent.com/gabrielandr/apuracao-2026/main/data/historico-6258.json",
+      "pontos_uol": 70,
+      "pontos_tse_arquivo": 6,
+      "precisao_uol": "Percentuais de Lula arredondados a 0,1 ponto percentual; seções arredondadas a 0,1 ponto percentual.",
+      "precisao_tse_arquivo": "Percentual de Lula calculado a partir dos votos acumulados em registros EA20 arquivados.",
+      "regra": "Prioridade visual a capturas com votos exatos; pontos arredondados identificados no tooltip. Sem previsão ou interpolação."
+    },
+    "curva_primeiro_turno_2026": {
+      "fonte": "https://noticias.uol.com.br/eleicoes/2026/apuracao/",
+      "fonte_oficial_replay": "https://evolucao-totalizacao.tse.jus.br/",
+      "n_pontos": 76,
+      "transformacao": "share = 100 * Lula% / (Lula% + Flavio%), ambos percentuais de votos válidos de cada parcial. Não são contagens exatas.",
+      "precisao": "UOL publica percentuais dos candidatos e das seções arredondados a 0,1 ponto percentual. Em 100%, resultado oficial TSE.",
+      "lacuna": "Registro fonte tem grande espaçamento entre 47,3%, 64,8% e 85,0%. Não se presume uma medição intermediária."
+    },
+    "curva_incremental_atualizacao": {
+      "modo_visual": "Índice dos lotes com votos absolutos verificados em ordem cronológica. Posição horizontal não é % de seções.",
+      "criterio": "Somente lotes incrementais com Δ seções <=5 pontos percentuais. A agregação 46->92,7% é excluída e a ruptura é explicitamente identificada."
+    }
+  },
+  "nacional": {
+    "2022_1": {
+      "lula": 57259504,
+      "opp": 51072345,
+      "valid": 118229719,
+      "turnout": 123682372,
+      "blank": 1964779,
+      "null": 3487874,
+      "electorate": 156454011,
+      "opp_name": "Jair Bolsonaro",
+      "residual_urna": 0,
+      "pair": 52.855650972965485,
+      "raw": 48.43071985986874,
+      "abst": 32770982,
+      "electorate_installed": 156453354,
+      "abst_pct": 20.94616776320436,
+      "null_pct": 2.820025152816442,
+      "blank_pct": 1.5885683369655945
+    },
+    "2022_2": {
+      "lula": 60345999,
+      "opp": 58206354,
+      "valid": 118552353,
+      "turnout": 124252796,
+      "blank": 1769678,
+      "null": 3930765,
+      "electorate": 156454011,
+      "opp_name": "Jair Bolsonaro",
+      "residual_urna": 0,
+      "pair": 50.90240511717216,
+      "raw": 50.90240511717216,
+      "abst": 32200558,
+      "electorate_installed": 156453354,
+      "abst_pct": 20.58157091346217,
+      "null_pct": 3.1635223725669723,
+      "blank_pct": 1.424256078712305
+    },
+    "2026_1": {
+      "lula": 53879538,
+      "opp": 56104503,
+      "valid": 119300788,
+      "turnout": 125275835,
+      "blank": 2300798,
+      "null": 3669003,
+      "electorate": 158745502,
+      "opp_name": "Flávio Bolsonaro",
+      "residual_urna": 5246,
+      "pair": 48.98850552326951,
+      "raw": 45.1627679106361,
+      "abst": 33469244,
+      "electorate_installed": 158745079,
+      "abst_pct": 21.083641906153197,
+      "null_pct": 2.928739608879877,
+      "blank_pct": 1.836585643192879
+    },
+    "2026_2": {
+      "lula": 64256232,
+      "opp": 59826041,
+      "valid": 124082273,
+      "turnout": 128236074,
+      "blank": 1430496,
+      "null": 2723305,
+      "electorate": 158745502,
+      "opp_name": "Flávio Bolsonaro",
+      "residual_urna": 0,
+      "pair": 51.7851828842626,
+      "raw": 51.7851828842626,
+      "abst": 30509005,
+      "electorate_installed": 158745079,
+      "abst_pct": 19.218866620741043,
+      "null_pct": 2.1236652956172066,
+      "blank_pct": 1.1155176194804592
+    }
+  },
+  "curvas": {
+    "2022_1": [
+      {
+        "sections": 1.99,
+        "share": 45.92874548690616
+      },
+      {
+        "sections": 5.42,
+        "share": 46.36232055002815
+      },
+      {
+        "sections": 6.06,
+        "share": 46.45548550284417
+      },
+      {
+        "sections": 6.77,
+        "share": 46.46610845912741
+      },
+      {
+        "sections": 7.39,
+        "share": 46.74635771663551
+      },
+      {
+        "sections": 8.1,
+        "share": 46.77868987349184
+      },
+      {
+        "sections": 9.06,
+        "share": 46.87146125930508
+      },
+      {
+        "sections": 10,
+        "share": 46.997355692571965
+      },
+      {
+        "sections": 11,
+        "share": 47.04186628357323
+      },
+      {
+        "sections": 12.09,
+        "share": 47.16594262253261
+      },
+      {
+        "sections": 13.2,
+        "share": 47.36692936496931
+      },
+      {
+        "sections": 14.64,
+        "share": 47.42572493710541
+      },
+      {
+        "sections": 16.16,
+        "share": 47.50823780240942
+      },
+      {
+        "sections": 17.47,
+        "share": 47.533683332669504
+      },
+      {
+        "sections": 18.89,
+        "share": 47.44502213846194
+      },
+      {
+        "sections": 20.26,
+        "share": 47.47704979871702
+      },
+      {
+        "sections": 22.41,
+        "share": 47.52535901297763
+      },
+      {
+        "sections": 24.16,
+        "share": 47.59485657100727
+      },
+      {
+        "sections": 25.83,
+        "share": 47.66590803197086
+      },
+      {
+        "sections": 28.19,
+        "share": 47.73992741355586
+      },
+      {
+        "sections": 30.81,
+        "share": 47.851291936853215
+      },
+      {
+        "sections": 33.18,
+        "share": 47.970552276934505
+      },
+      {
+        "sections": 35.51,
+        "share": 48.09076136042665
+      },
+      {
+        "sections": 38.38,
+        "share": 48.27141543475153
+      },
+      {
+        "sections": 41.19,
+        "share": 48.43745296709158
+      },
+      {
+        "sections": 44.17,
+        "share": 48.61991368849822
+      },
+      {
+        "sections": 46.46,
+        "share": 48.782072175169475
+      },
+      {
+        "sections": 52.21,
+        "share": 49.208999109659345
+      },
+      {
+        "sections": 54.59,
+        "share": 49.20994628797976
+      },
+      {
+        "sections": 60.33,
+        "share": 49.555628783398475
+      },
+      {
+        "sections": 63.45,
+        "share": 49.71544171519541
+      },
+      {
+        "sections": 66.66,
+        "share": 49.91960714615609
+      },
+      {
+        "sections": 70,
+        "share": 50.12800530794465
+      },
+      {
+        "sections": 73.31,
+        "share": 50.379643284792834
+      },
+      {
+        "sections": 76.27,
+        "share": 50.549211464935695
+      },
+      {
+        "sections": 79.32,
+        "share": 50.66881160082806
+      },
+      {
+        "sections": 82.55,
+        "share": 50.93802123972976
+      },
+      {
+        "sections": 85.55,
+        "share": 51.045095933973805
+      },
+      {
+        "sections": 88.55,
+        "share": 51.34014459856066
+      },
+      {
+        "sections": 90.26,
+        "share": 51.52724732027574
+      },
+      {
+        "sections": 91.61,
+        "share": 51.66644895252956
+      },
+      {
+        "sections": 92.17,
+        "share": 51.75040491424832
+      },
+      {
+        "sections": 92.63,
+        "share": 51.807057971007545
+      },
+      {
+        "sections": 92.96,
+        "share": 51.8459575134466
+      },
+      {
+        "sections": 93.3,
+        "share": 51.876922178273375
+      },
+      {
+        "sections": 93.45,
+        "share": 51.88494735927327
+      },
+      {
+        "sections": 93.87,
+        "share": 51.92943502949859
+      },
+      {
+        "sections": 94.05,
+        "share": 51.95228720700391
+      },
+      {
+        "sections": 94.47,
+        "share": 52.00481436252859
+      },
+      {
+        "sections": 94.68,
+        "share": 52.019579072566664
+      },
+      {
+        "sections": 94.88,
+        "share": 52.036432094341606
+      },
+      {
+        "sections": 95.04,
+        "share": 52.04860065281391
+      },
+      {
+        "sections": 95.23,
+        "share": 52.07354447748708
+      },
+      {
+        "sections": 95.56,
+        "share": 52.107632594746974
+      },
+      {
+        "sections": 95.68,
+        "share": 52.124087124079544
+      },
+      {
+        "sections": 95.76,
+        "share": 52.134003597029896
+      },
+      {
+        "sections": 95.85,
+        "share": 52.145324668408726
+      },
+      {
+        "sections": 96.1,
+        "share": 52.18223951460395
+      },
+      {
+        "sections": 96.2,
+        "share": 52.192870676849154
+      },
+      {
+        "sections": 96.42,
+        "share": 52.220402781287625
+      },
+      {
+        "sections": 96.56,
+        "share": 52.24310404495034
+      },
+      {
+        "sections": 96.67,
+        "share": 52.25028594980617
+      },
+      {
+        "sections": 96.74,
+        "share": 52.2556350295797
+      },
+      {
+        "sections": 96.93,
+        "share": 52.271602864761725
+      },
+      {
+        "sections": 97.17,
+        "share": 52.30493162463653
+      },
+      {
+        "sections": 97.32,
+        "share": 52.32653179537096
+      },
+      {
+        "sections": 97.38,
+        "share": 52.336247597084245
+      },
+      {
+        "sections": 97.51,
+        "share": 52.35776977774711
+      },
+      {
+        "sections": 97.56,
+        "share": 52.36534862418237
+      },
+      {
+        "sections": 99.94,
+        "share": 52.83961412532954
+      },
+      {
+        "sections": 99.94,
+        "share": 52.84009886755035
+      },
+      {
+        "sections": 99.94,
+        "share": 52.84039760497748
+      },
+      {
+        "sections": 99.94,
+        "share": 52.840688768485535
+      },
+      {
+        "sections": 99.94,
+        "share": 52.84130898083302
+      },
+      {
+        "sections": 100,
+        "share": 52.855650972965485
+      }
+    ],
+    "2022_2": [
+      {
+        "sections": 0.12,
+        "share": 57.298958704114895
+      },
+      {
+        "sections": 0.12,
+        "share": 57.228689237328545
+      },
+      {
+        "sections": 0.12,
+        "share": 57.06523550785026
+      },
+      {
+        "sections": 0.13,
+        "share": 56.362958623994885
+      },
+      {
+        "sections": 0.15,
+        "share": 53.900111210369914
+      },
+      {
+        "sections": 0.21,
+        "share": 50.37202355167263
+      },
+      {
+        "sections": 0.3,
+        "share": 47.35812848841888
+      },
+      {
+        "sections": 0.55,
+        "share": 44.42087265332223
+      },
+      {
+        "sections": 0.66,
+        "share": 44.21838005795807
+      },
+      {
+        "sections": 0.76,
+        "share": 43.8889439000584
+      },
+      {
+        "sections": 0.96,
+        "share": 43.525053372864576
+      },
+      {
+        "sections": 1.16,
+        "share": 43.322676969330075
+      },
+      {
+        "sections": 1.37,
+        "share": 43.48584085771889
+      },
+      {
+        "sections": 1.64,
+        "share": 43.290003240456564
+      },
+      {
+        "sections": 1.83,
+        "share": 43.362023153172515
+      },
+      {
+        "sections": 2.05,
+        "share": 43.58568451031305
+      },
+      {
+        "sections": 2.56,
+        "share": 44.17668593656728
+      },
+      {
+        "sections": 2.94,
+        "share": 44.61200118715735
+      },
+      {
+        "sections": 3.47,
+        "share": 45.0556620402349
+      },
+      {
+        "sections": 4.39,
+        "share": 46.105484341508486
+      },
+      {
+        "sections": 4.82,
+        "share": 46.43060377689654
+      },
+      {
+        "sections": 5.61,
+        "share": 46.76769346447293
+      },
+      {
+        "sections": 6.26,
+        "share": 47.06777978399483
+      },
+      {
+        "sections": 6.9,
+        "share": 47.291956841915855
+      },
+      {
+        "sections": 7.53,
+        "share": 47.42740389589728
+      },
+      {
+        "sections": 8.06,
+        "share": 47.60576434402446
+      },
+      {
+        "sections": 8.71,
+        "share": 47.7795762392143
+      },
+      {
+        "sections": 10.09,
+        "share": 47.954309096956436
+      },
+      {
+        "sections": 10.72,
+        "share": 47.975869568438334
+      },
+      {
+        "sections": 11.38,
+        "share": 48.03878619578125
+      },
+      {
+        "sections": 12.02,
+        "share": 48.14066647048265
+      },
+      {
+        "sections": 12.64,
+        "share": 48.178798162135514
+      },
+      {
+        "sections": 13.25,
+        "share": 48.22638869530791
+      },
+      {
+        "sections": 14.6,
+        "share": 48.309328036829456
+      },
+      {
+        "sections": 15.34,
+        "share": 48.31819217995841
+      },
+      {
+        "sections": 16.22,
+        "share": 48.3113183828866
+      },
+      {
+        "sections": 17.72,
+        "share": 48.36916548953705
+      },
+      {
+        "sections": 18.53,
+        "share": 48.37086019324874
+      },
+      {
+        "sections": 19.23,
+        "share": 48.42649625006736
+      },
+      {
+        "sections": 19.98,
+        "share": 48.434234190650784
+      },
+      {
+        "sections": 20.77,
+        "share": 48.51741876175385
+      },
+      {
+        "sections": 22.3,
+        "share": 48.57374452805609
+      },
+      {
+        "sections": 23.05,
+        "share": 48.64311538384808
+      },
+      {
+        "sections": 23.75,
+        "share": 48.6950075091966
+      },
+      {
+        "sections": 24.48,
+        "share": 48.73218991912723
+      },
+      {
+        "sections": 26.04,
+        "share": 48.77026133018368
+      },
+      {
+        "sections": 26.88,
+        "share": 48.830381423667504
+      },
+      {
+        "sections": 27.7,
+        "share": 48.86891856210571
+      },
+      {
+        "sections": 28.5,
+        "share": 48.9038627399992
+      },
+      {
+        "sections": 30.1,
+        "share": 48.93970240566218
+      },
+      {
+        "sections": 30.9,
+        "share": 48.95922660660424
+      },
+      {
+        "sections": 31.67,
+        "share": 49.01427218323503
+      },
+      {
+        "sections": 32.41,
+        "share": 49.09414585450296
+      },
+      {
+        "sections": 33.12,
+        "share": 49.11727391728026
+      },
+      {
+        "sections": 34.69,
+        "share": 49.15581067170314
+      },
+      {
+        "sections": 35.44,
+        "share": 49.18888802094415
+      },
+      {
+        "sections": 36.3,
+        "share": 49.21751128034357
+      },
+      {
+        "sections": 37.13,
+        "share": 49.25492856742937
+      },
+      {
+        "sections": 38.11,
+        "share": 49.268887985787686
+      },
+      {
+        "sections": 39.9,
+        "share": 49.343501666595
+      },
+      {
+        "sections": 40.78,
+        "share": 49.36036170655774
+      },
+      {
+        "sections": 41.75,
+        "share": 49.39287565581796
+      },
+      {
+        "sections": 42.69,
+        "share": 49.422005629619555
+      },
+      {
+        "sections": 44.41,
+        "share": 49.49036019597147
+      },
+      {
+        "sections": 45.28,
+        "share": 49.53258389454242
+      },
+      {
+        "sections": 46.28,
+        "share": 49.56767218969656
+      },
+      {
+        "sections": 47.32,
+        "share": 49.60889333646777
+      },
+      {
+        "sections": 49.72,
+        "share": 49.69132049533365
+      },
+      {
+        "sections": 50.92,
+        "share": 49.702155995332866
+      },
+      {
+        "sections": 51.96,
+        "share": 49.74165011159422
+      },
+      {
+        "sections": 54.33,
+        "share": 49.799218977724045
+      },
+      {
+        "sections": 55.39,
+        "share": 49.80704957203323
+      },
+      {
+        "sections": 56.57,
+        "share": 49.823534877933525
+      },
+      {
+        "sections": 57.57,
+        "share": 49.85283613176711
+      },
+      {
+        "sections": 59.94,
+        "share": 49.87844781533744
+      },
+      {
+        "sections": 61.06,
+        "share": 49.902756476959674
+      },
+      {
+        "sections": 62.28,
+        "share": 49.924351633155084
+      },
+      {
+        "sections": 64.53,
+        "share": 49.94208225932571
+      },
+      {
+        "sections": 65.57,
+        "share": 49.96973393133272
+      },
+      {
+        "sections": 66.87,
+        "share": 49.98671087995215
+      },
+      {
+        "sections": 67.76,
+        "share": 50.00529504450825
+      },
+      {
+        "sections": 69.86,
+        "share": 50.04177350788451
+      },
+      {
+        "sections": 71.09,
+        "share": 50.07285150718572
+      },
+      {
+        "sections": 72.28,
+        "share": 50.100968354254725
+      },
+      {
+        "sections": 74.27,
+        "share": 50.15147890900728
+      },
+      {
+        "sections": 75.19,
+        "share": 50.180249308747364
+      },
+      {
+        "sections": 77.5,
+        "share": 50.22897329707365
+      },
+      {
+        "sections": 78.64,
+        "share": 50.25492819315773
+      },
+      {
+        "sections": 79.64,
+        "share": 50.29027801008475
+      },
+      {
+        "sections": 82.05,
+        "share": 50.34597691142686
+      },
+      {
+        "sections": 83.01,
+        "share": 50.36435343355916
+      },
+      {
+        "sections": 84.33,
+        "share": 50.40030443177734
+      },
+      {
+        "sections": 85.98,
+        "share": 50.433346589093276
+      },
+      {
+        "sections": 86.71,
+        "share": 50.45643140227223
+      },
+      {
+        "sections": 87.55,
+        "share": 50.479652302613935
+      },
+      {
+        "sections": 88.3,
+        "share": 50.496179382278115
+      },
+      {
+        "sections": 89.53,
+        "share": 50.52391601390688
+      },
+      {
+        "sections": 90.07,
+        "share": 50.530407009579825
+      },
+      {
+        "sections": 91.02,
+        "share": 50.55777186627939
+      },
+      {
+        "sections": 91.42,
+        "share": 50.56925792225128
+      },
+      {
+        "sections": 92.37,
+        "share": 50.592743954261664
+      },
+      {
+        "sections": 92.77,
+        "share": 50.600482673666036
+      },
+      {
+        "sections": 93.1,
+        "share": 50.60645295165047
+      },
+      {
+        "sections": 93.63,
+        "share": 50.62386731092895
+      },
+      {
+        "sections": 94.45,
+        "share": 50.64332820623372
+      },
+      {
+        "sections": 94.79,
+        "share": 50.654022731645085
+      },
+      {
+        "sections": 95,
+        "share": 50.65930959451757
+      },
+      {
+        "sections": 95.96,
+        "share": 50.68427499269336
+      },
+      {
+        "sections": 96.73,
+        "share": 50.711791724573324
+      },
+      {
+        "sections": 96.94,
+        "share": 50.71901183885504
+      },
+      {
+        "sections": 97.03,
+        "share": 50.72431598723045
+      },
+      {
+        "sections": 97.13,
+        "share": 50.72588737189981
+      },
+      {
+        "sections": 97.33,
+        "share": 50.731265900981256
+      },
+      {
+        "sections": 97.54,
+        "share": 50.74794703819395
+      },
+      {
+        "sections": 97.66,
+        "share": 50.75356801192182
+      },
+      {
+        "sections": 97.88,
+        "share": 50.76175951041868
+      },
+      {
+        "sections": 98.04,
+        "share": 50.77354815972107
+      },
+      {
+        "sections": 98.13,
+        "share": 50.78080458398487
+      },
+      {
+        "sections": 98.28,
+        "share": 50.79200817108585
+      },
+      {
+        "sections": 98.34,
+        "share": 50.7976727707368
+      },
+      {
+        "sections": 98.45,
+        "share": 50.800351772714706
+      },
+      {
+        "sections": 98.56,
+        "share": 50.81463648014309
+      },
+      {
+        "sections": 98.61,
+        "share": 50.81684648703046
+      },
+      {
+        "sections": 98.68,
+        "share": 50.82009295670759
+      },
+      {
+        "sections": 98.77,
+        "share": 50.82286368274105
+      },
+      {
+        "sections": 98.86,
+        "share": 50.8311081168907
+      },
+      {
+        "sections": 98.91,
+        "share": 50.83317145553715
+      },
+      {
+        "sections": 99.01,
+        "share": 50.837036429280005
+      },
+      {
+        "sections": 99.1,
+        "share": 50.84158359523958
+      },
+      {
+        "sections": 99.17,
+        "share": 50.84620635776124
+      },
+      {
+        "sections": 99.24,
+        "share": 50.852176505662854
+      },
+      {
+        "sections": 99.26,
+        "share": 50.854579234076645
+      },
+      {
+        "sections": 99.29,
+        "share": 50.858107432945445
+      },
+      {
+        "sections": 99.34,
+        "share": 50.861928345045314
+      },
+      {
+        "sections": 99.4,
+        "share": 50.8709291095006
+      },
+      {
+        "sections": 99.45,
+        "share": 50.87364885943472
+      },
+      {
+        "sections": 99.49,
+        "share": 50.87471906885883
+      },
+      {
+        "sections": 99.52,
+        "share": 50.87553764216828
+      },
+      {
+        "sections": 99.55,
+        "share": 50.877788722530866
+      },
+      {
+        "sections": 99.56,
+        "share": 50.87891184512546
+      },
+      {
+        "sections": 99.58,
+        "share": 50.880722668636274
+      },
+      {
+        "sections": 99.63,
+        "share": 50.88023426646524
+      },
+      {
+        "sections": 99.65,
+        "share": 50.88190656345435
+      },
+      {
+        "sections": 99.66,
+        "share": 50.88232991143035
+      },
+      {
+        "sections": 99.68,
+        "share": 50.88372779652612
+      },
+      {
+        "sections": 99.7,
+        "share": 50.884519989840086
+      },
+      {
+        "sections": 99.71,
+        "share": 50.8853467071998
+      },
+      {
+        "sections": 99.74,
+        "share": 50.885216271980376
+      },
+      {
+        "sections": 99.75,
+        "share": 50.885694117530456
+      },
+      {
+        "sections": 99.76,
+        "share": 50.885315667767806
+      },
+      {
+        "sections": 99.77,
+        "share": 50.88627445993922
+      },
+      {
+        "sections": 99.79,
+        "share": 50.888422657996344
+      },
+      {
+        "sections": 99.81,
+        "share": 50.89019175115986
+      },
+      {
+        "sections": 99.83,
+        "share": 50.89201321524343
+      },
+      {
+        "sections": 99.85,
+        "share": 50.89710585117668
+      },
+      {
+        "sections": 99.87,
+        "share": 50.8993324503889
+      },
+      {
+        "sections": 99.87,
+        "share": 50.89921032657273
+      },
+      {
+        "sections": 99.88,
+        "share": 50.89913368024634
+      },
+      {
+        "sections": 99.89,
+        "share": 50.899347979712935
+      },
+      {
+        "sections": 99.89,
+        "share": 50.89930850781582
+      },
+      {
+        "sections": 99.89,
+        "share": 50.89903467206673
+      },
+      {
+        "sections": 99.9,
+        "share": 50.898914734263776
+      },
+      {
+        "sections": 99.93,
+        "share": 50.89650531092246
+      },
+      {
+        "sections": 99.94,
+        "share": 50.896409564573794
+      },
+      {
+        "sections": 99.95,
+        "share": 50.89634925472549
+      },
+      {
+        "sections": 99.95,
+        "share": 50.89576501878725
+      },
+      {
+        "sections": 99.95,
+        "share": 50.89569613086128
+      },
+      {
+        "sections": 99.96,
+        "share": 50.896622928782406
+      },
+      {
+        "sections": 99.96,
+        "share": 50.89710261594169
+      },
+      {
+        "sections": 99.96,
+        "share": 50.89724270640805
+      },
+      {
+        "sections": 99.97,
+        "share": 50.89766053246129
+      },
+      {
+        "sections": 99.97,
+        "share": 50.89776241783554
+      },
+      {
+        "sections": 99.97,
+        "share": 50.897984391690805
+      },
+      {
+        "sections": 99.97,
+        "share": 50.899224522095615
+      },
+      {
+        "sections": 99.97,
+        "share": 50.89965829861503
+      },
+      {
+        "sections": 99.98,
+        "share": 50.90013965155456
+      },
+      {
+        "sections": 99.98,
+        "share": 50.900079222258526
+      },
+      {
+        "sections": 99.98,
+        "share": 50.90048418516588
+      },
+      {
+        "sections": 99.98,
+        "share": 50.90063961572827
+      },
+      {
+        "sections": 99.98,
+        "share": 50.90073272711243
+      },
+      {
+        "sections": 99.98,
+        "share": 50.90100362606278
+      },
+      {
+        "sections": 99.99,
+        "share": 50.90156553222486
+      },
+      {
+        "sections": 99.99,
+        "share": 50.90164656777923
+      },
+      {
+        "sections": 99.99,
+        "share": 50.901638693614174
+      },
+      {
+        "sections": 99.99,
+        "share": 50.901693761409526
+      },
+      {
+        "sections": 99.99,
+        "share": 50.90173123719237
+      },
+      {
+        "sections": 99.99,
+        "share": 50.9017560868888
+      },
+      {
+        "sections": 99.99,
+        "share": 50.90177916499134
+      },
+      {
+        "sections": 99.99,
+        "share": 50.90185092452763
+      },
+      {
+        "sections": 99.99,
+        "share": 50.90192684059919
+      },
+      {
+        "sections": 99.99,
+        "share": 50.90229066373768
+      },
+      {
+        "sections": 99.99,
+        "share": 50.90230877769092
+      },
+      {
+        "sections": 99.99,
+        "share": 50.90229903338561
+      },
+      {
+        "sections": 99.99,
+        "share": 50.90228586937245
+      },
+      {
+        "sections": 99.99,
+        "share": 50.90234221176907
+      },
+      {
+        "sections": 99.99,
+        "share": 50.902333688857524
+      },
+      {
+        "sections": 99.99,
+        "share": 50.90234083632575
+      },
+      {
+        "sections": 99.99,
+        "share": 50.90234679596313
+      },
+      {
+        "sections": 100,
+        "share": 50.90240511717216
+      },
+      {
+        "sections": 100,
+        "share": 50.90240511717216
+      }
+    ],
+    "2026_2": [
+      {
+        "sections": 0.25,
+        "share": 57.655409047992066,
+        "valid": 335743,
+        "lula": 193574,
+        "flavio": 142169,
+        "hora": "17:06",
+        "increment": null,
+        "preciso": true
+      },
+      {
+        "sections": 0.29,
+        "share": 56.70349893757994,
+        "valid": 390147,
+        "lula": 221227,
+        "flavio": 168920,
+        "hora": "19:02",
+        "increment": {
+          "lula": 27653,
+          "flavio": 26751,
+          "total": 54404,
+          "pct_lula": 50.82898316300272
+        },
+        "preciso": true
+      },
+      {
+        "sections": 2,
+        "share": 52.157742730931844,
+        "valid": 1942099,
+        "lula": 1012955,
+        "flavio": 929144,
+        "hora": "parcial-3",
+        "increment": {
+          "lula": 791728,
+          "flavio": 760224,
+          "total": 1551952,
+          "pct_lula": 51.01497984473747
+        },
+        "preciso": false
+      },
+      {
+        "sections": 2,
+        "share": 52.10623491762997,
+        "valid": 2180526,
+        "lula": 1136190,
+        "flavio": 1044336,
+        "hora": "19:15",
+        "increment": {
+          "lula": 123235,
+          "flavio": 115192,
+          "total": 238427,
+          "pct_lula": 51.686679780394
+        },
+        "preciso": false
+      },
+      {
+        "sections": 2,
+        "share": 51.95804129007501,
+        "valid": 2407891,
+        "lula": 1251093,
+        "flavio": 1156798,
+        "hora": "19:17",
+        "increment": {
+          "lula": 114903,
+          "flavio": 112462,
+          "total": 227365,
+          "pct_lula": 50.5368020583643
+        },
+        "preciso": false
+      },
+      {
+        "sections": 3,
+        "share": 51.30422787910145,
+        "valid": 4190257,
+        "lula": 2149779,
+        "flavio": 2040478,
+        "hora": "19:25",
+        "increment": {
+          "lula": 898686,
+          "flavio": 883680,
+          "total": 1782366,
+          "pct_lula": 50.42095731179791
+        },
+        "preciso": false
+      },
+      {
+        "sections": 5,
+        "share": 51.175264237261395,
+        "valid": 5654388,
+        "lula": 2893648,
+        "flavio": 2760740,
+        "hora": "19:28",
+        "increment": {
+          "lula": 743869,
+          "flavio": 720262,
+          "total": 1464131,
+          "pct_lula": 50.80617786250001
+        },
+        "preciso": false
+      },
+      {
+        "sections": 6,
+        "share": 51.011151462085216,
+        "valid": 6957563,
+        "lula": 3549133,
+        "flavio": 3408430,
+        "hora": "19:31",
+        "increment": {
+          "lula": 655485,
+          "flavio": 647690,
+          "total": 1303175,
+          "pct_lula": 50.29907725363056
+        },
+        "preciso": false
+      },
+      {
+        "sections": 9,
+        "share": 50.60849976140891,
+        "valid": 10813480,
+        "lula": 5472540,
+        "flavio": 5340940,
+        "hora": "19:36",
+        "increment": {
+          "lula": 1923407,
+          "flavio": 1932510,
+          "total": 3855917,
+          "pct_lula": 49.88196063348874
+        },
+        "preciso": false
+      },
+      {
+        "sections": 10,
+        "share": 50.48071918973958,
+        "valid": 12508966,
+        "lula": 6314616,
+        "flavio": 6194350,
+        "hora": "19:39",
+        "increment": {
+          "lula": 842076,
+          "flavio": 853410,
+          "total": 1695486,
+          "pct_lula": 49.665759552128414
+        },
+        "preciso": false
+      },
+      {
+        "sections": 11,
+        "share": 50.41407169804859,
+        "valid": 13605977,
+        "lula": 6859327,
+        "flavio": 6746650,
+        "hora": "19:41",
+        "increment": {
+          "lula": 544711,
+          "flavio": 552300,
+          "total": 1097011,
+          "pct_lula": 49.6541055650308
+        },
+        "preciso": false
+      },
+      {
+        "sections": 12,
+        "share": 50.332941300243455,
+        "valid": 14875445,
+        "lula": 7487249,
+        "flavio": 7388196,
+        "hora": "19:43",
+        "increment": {
+          "lula": 627922,
+          "flavio": 641546,
+          "total": 1269468,
+          "pct_lula": 49.46339726562623
+        },
+        "preciso": false
+      },
+      {
+        "sections": 13,
+        "share": 50.1202988861525,
+        "valid": 16450277,
+        "lula": 8244928,
+        "flavio": 8205349,
+        "hora": "19:45",
+        "increment": {
+          "lula": 757679,
+          "flavio": 817153,
+          "total": 1574832,
+          "pct_lula": 48.111735093013095
+        },
+        "preciso": false
+      },
+      {
+        "sections": 14,
+        "share": 49.98850119583458,
+        "valid": 17049599,
+        "lula": 8522839,
+        "flavio": 8526760,
+        "hora": "19:46",
+        "increment": {
+          "lula": 277911,
+          "flavio": 321411,
+          "total": 599322,
+          "pct_lula": 46.370899116001084
+        },
+        "preciso": false
+      },
+      {
+        "sections": 14,
+        "share": 49.97514408522887,
+        "valid": 17830766,
+        "lula": 8910951,
+        "flavio": 8919815,
+        "hora": "19:47",
+        "increment": {
+          "lula": 388112,
+          "flavio": 393055,
+          "total": 781167,
+          "pct_lula": 49.68361438719249
+        },
+        "preciso": false
+      },
+      {
+        "sections": 15,
+        "share": 49.96111142976895,
+        "valid": 18497723,
+        "lula": 9241668,
+        "flavio": 9256055,
+        "hora": "19:48",
+        "increment": {
+          "lula": 330717,
+          "flavio": 336240,
+          "total": 666957,
+          "pct_lula": 49.58595531645968
+        },
+        "preciso": false
+      },
+      {
+        "sections": 15.383737141,
+        "share": 49.90411574589189,
+        "valid": 19176767,
+        "lula": 9569996,
+        "flavio": 9606771,
+        "hora": "19:49",
+        "increment": {
+          "lula": 328328,
+          "flavio": 350716,
+          "total": 679044,
+          "pct_lula": 48.351505940704875
+        },
+        "preciso": true
+      },
+      {
+        "sections": 17,
+        "share": 49.77077111455786,
+        "valid": 20748694,
+        "lula": 10326785,
+        "flavio": 10421909,
+        "hora": "19:53",
+        "increment": {
+          "lula": 756789,
+          "flavio": 815138,
+          "total": 1571927,
+          "pct_lula": 48.14402958916031
+        },
+        "preciso": false
+      },
+      {
+        "sections": 17,
+        "share": 49.76084092428156,
+        "valid": 21405209,
+        "lula": 10651412,
+        "flavio": 10753797,
+        "hora": "19:54",
+        "increment": {
+          "lula": 324627,
+          "flavio": 331888,
+          "total": 656515,
+          "pct_lula": 49.447004257328466
+        },
+        "preciso": false
+      },
+      {
+        "sections": 18.03,
+        "share": 49.677723562438494,
+        "valid": 22416780,
+        "lula": 11136146,
+        "flavio": 11280634,
+        "hora": "19:54:37",
+        "increment": {
+          "lula": 484734,
+          "flavio": 526837,
+          "total": 1011571,
+          "pct_lula": 47.91893006027259
+        },
+        "preciso": true
+      },
+      {
+        "sections": 21,
+        "share": 49.51089041296686,
+        "valid": 25719594,
+        "lula": 12734000,
+        "flavio": 12985594,
+        "hora": "19:59",
+        "increment": {
+          "lula": 1597854,
+          "flavio": 1704960,
+          "total": 3302814,
+          "pct_lula": 48.37856446048733
+        },
+        "preciso": false
+      },
+      {
+        "sections": 22,
+        "share": 49.53149825374435,
+        "valid": 27021244,
+        "lula": 13384027,
+        "flavio": 13637217,
+        "hora": "20:00",
+        "increment": {
+          "lula": 650027,
+          "flavio": 651623,
+          "total": 1301650,
+          "pct_lula": 49.93869319709599
+        },
+        "preciso": false
+      },
+      {
+        "sections": 25,
+        "share": 49.4899577062554,
+        "valid": 31115949,
+        "lula": 15399270,
+        "flavio": 15716679,
+        "hora": "20:04",
+        "increment": {
+          "lula": 2015243,
+          "flavio": 2079462,
+          "total": 4094705,
+          "pct_lula": 49.21582873491497
+        },
+        "preciso": false
+      },
+      {
+        "sections": 26,
+        "share": 49.541184333836235,
+        "valid": 32472736,
+        "lula": 16087378,
+        "flavio": 16385358,
+        "hora": "20:05",
+        "increment": {
+          "lula": 688108,
+          "flavio": 668679,
+          "total": 1356787,
+          "pct_lula": 50.71599300406033
+        },
+        "preciso": false
+      },
+      {
+        "sections": 28,
+        "share": 49.553008373345364,
+        "valid": 34825149,
+        "lula": 17256909,
+        "flavio": 17568240,
+        "hora": "20:08",
+        "increment": {
+          "lula": 1169531,
+          "flavio": 1182882,
+          "total": 2352413,
+          "pct_lula": 49.716227550179326
+        },
+        "preciso": false
+      },
+      {
+        "sections": 31,
+        "share": 49.56961991391801,
+        "valid": 38506777,
+        "lula": 19087663,
+        "flavio": 19419114,
+        "hora": "20:10",
+        "increment": {
+          "lula": 1830754,
+          "flavio": 1850874,
+          "total": 3681628,
+          "pct_lula": 49.726751317623616
+        },
+        "preciso": false
+      },
+      {
+        "sections": 32,
+        "share": 49.5551985774884,
+        "valid": 39205023,
+        "lula": 19428127,
+        "flavio": 19776896,
+        "hora": "20:11",
+        "increment": {
+          "lula": 340464,
+          "flavio": 357782,
+          "total": 698246,
+          "pct_lula": 48.759892645285476
+        },
+        "preciso": false
+      },
+      {
+        "sections": 33,
+        "share": 49.6031192278541,
+        "valid": 40495663,
+        "lula": 20087112,
+        "flavio": 20408551,
+        "hora": "20:12",
+        "increment": {
+          "lula": 658985,
+          "flavio": 631655,
+          "total": 1290640,
+          "pct_lula": 51.05877704084795
+        },
+        "preciso": false
+      },
+      {
+        "sections": 33,
+        "share": 49.62950244498879,
+        "valid": 41141702,
+        "lula": 20418422,
+        "flavio": 20723280,
+        "hora": "20:13",
+        "increment": {
+          "lula": 331310,
+          "flavio": 314729,
+          "total": 646039,
+          "pct_lula": 51.28328165946638
+        },
+        "preciso": false
+      },
+      {
+        "sections": 37,
+        "share": 49.70199790592712,
+        "valid": 46083401,
+        "lula": 22904371,
+        "flavio": 23179030,
+        "hora": "20:16",
+        "increment": {
+          "lula": 2485949,
+          "flavio": 2455750,
+          "total": 4941699,
+          "pct_lula": 50.30555280683829
+        },
+        "preciso": false
+      },
+      {
+        "sections": 40,
+        "share": 49.78000605434677,
+        "valid": 49105215,
+        "lula": 24444579,
+        "flavio": 24660636,
+        "hora": "20:18",
+        "increment": {
+          "lula": 1540208,
+          "flavio": 1481606,
+          "total": 3021814,
+          "pct_lula": 50.96964935631379
+        },
+        "preciso": false
+      },
+      {
+        "sections": 41,
+        "share": 49.81436665366867,
+        "valid": 50441099,
+        "lula": 25126914,
+        "flavio": 25314185,
+        "hora": "20:19",
+        "increment": {
+          "lula": 682335,
+          "flavio": 653549,
+          "total": 1335884,
+          "pct_lula": 51.077413907195535
+        },
+        "preciso": false
+      },
+      {
+        "sections": 42,
+        "share": 49.82828775957504,
+        "valid": 51247657,
+        "lula": 25535830,
+        "flavio": 25711827,
+        "hora": "20:20",
+        "increment": {
+          "lula": 408916,
+          "flavio": 397642,
+          "total": 806558,
+          "pct_lula": 50.69889580166584
+        },
+        "preciso": false
+      },
+      {
+        "sections": 44,
+        "share": 49.893975197783526,
+        "valid": 54683903,
+        "lula": 27283973,
+        "flavio": 27399930,
+        "hora": "20:23",
+        "increment": {
+          "lula": 1748143,
+          "flavio": 1688103,
+          "total": 3436246,
+          "pct_lula": 50.873627790327
+        },
+        "preciso": false
+      },
+      {
+        "sections": 45,
+        "share": 49.91885775354317,
+        "valid": 55370047,
+        "lula": 27640095,
+        "flavio": 27729952,
+        "hora": "20:23",
+        "increment": {
+          "lula": 356122,
+          "flavio": 330022,
+          "total": 686144,
+          "pct_lula": 51.90193312191027
+        },
+        "preciso": false
+      },
+      {
+        "sections": 45,
+        "share": 49.94977146306083,
+        "valid": 55959225,
+        "lula": 27951505,
+        "flavio": 28007720,
+        "hora": "20:24",
+        "increment": {
+          "lula": 311410,
+          "flavio": 277768,
+          "total": 589178,
+          "pct_lula": 52.85499458567699
+        },
+        "preciso": false
+      },
+      {
+        "sections": 46,
+        "share": 49.97490773851828,
+        "valid": 56752557,
+        "lula": 28362038,
+        "flavio": 28390519,
+        "hora": "20:24",
+        "increment": {
+          "lula": 410533,
+          "flavio": 382799,
+          "total": 793332,
+          "pct_lula": 51.74794411419179
+        },
+        "preciso": false
+      },
+      {
+        "sections": 92.734072044,
+        "share": 51.66330638571684,
+        "valid": 114733462,
+        "lula": 59275100,
+        "flavio": 55458362,
+        "hora": "25/10/2026 21:04:22",
+        "increment": {
+          "lula": 30913062,
+          "flavio": 27067843,
+          "total": 57980905,
+          "pct_lula": 53.31593565157357
+        },
+        "preciso": true
+      },
+      {
+        "sections": 93.824111464,
+        "share": 51.690423800807196,
+        "valid": 116114314,
+        "lula": 60019981,
+        "flavio": 56094333,
+        "hora": "25/10/2026 21:05:21",
+        "increment": {
+          "lula": 744881,
+          "flavio": 635971,
+          "total": 1380852,
+          "pct_lula": 53.943579760901244
+        },
+        "preciso": true
+      },
+      {
+        "sections": 95.886613467,
+        "share": 51.729179559094284,
+        "valid": 118743799,
+        "lula": 61425193,
+        "flavio": 57318606,
+        "hora": "25/10/2026 21:07:22",
+        "increment": {
+          "lula": 1405212,
+          "flavio": 1224273,
+          "total": 2629485,
+          "pct_lula": 53.440578668446484
+        },
+        "preciso": true
+      },
+      {
+        "sections": 98.26559145,
+        "share": 51.74584873905578,
+        "valid": 121844605,
+        "lula": 63049525,
+        "flavio": 58795080,
+        "hora": "25/10/2026 21:09:33",
+        "increment": {
+          "lula": 1624332,
+          "flavio": 1476474,
+          "total": 3100806,
+          "pct_lula": 52.384186563106496
+        },
+        "preciso": true
+      },
+      {
+        "sections": 100,
+        "share": 51.7851828842626,
+        "valid": 124082273,
+        "lula": 64256232,
+        "flavio": 59826041,
+        "hora": "25/10/2026 23:27:02",
+        "increment": {
+          "lula": 1206707,
+          "flavio": 1030961,
+          "total": 2237668,
+          "pct_lula": 53.926990062869024
+        },
+        "preciso": true
+      }
+    ],
+    "2026_1": [
+      {
+        "sections": 100,
+        "share": 48.98850552326951
+      }
+    ],
+    "2026_2_uol": [
+      {
+        "sections": 46.5,
+        "share": 50.0,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 47.6,
+        "share": 50.0,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 48.4,
+        "share": 50.0,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 49.0,
+        "share": 50.0,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 49.6,
+        "share": 50.1,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 50.1,
+        "share": 50.1,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 50.8,
+        "share": 50.1,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 51.4,
+        "share": 50.1,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 51.9,
+        "share": 50.2,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 52.5,
+        "share": 50.2,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 53.1,
+        "share": 50.2,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 53.9,
+        "share": 50.3,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 54.4,
+        "share": 50.3,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 55.0,
+        "share": 50.4,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 55.6,
+        "share": 50.4,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 56.2,
+        "share": 50.4,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 56.8,
+        "share": 50.4,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 57.6,
+        "share": 50.5,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 58.6,
+        "share": 50.5,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 59.1,
+        "share": 50.5,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 59.8,
+        "share": 50.5,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 60.9,
+        "share": 50.5,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 62.0,
+        "share": 50.6,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 62.7,
+        "share": 50.6,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 63.4,
+        "share": 50.6,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 64.2,
+        "share": 50.7,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 64.8,
+        "share": 50.7,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 65.4,
+        "share": 50.8,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 65.9,
+        "share": 50.8,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 66.5,
+        "share": 50.8,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 67.1,
+        "share": 50.9,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 67.4,
+        "share": 50.9,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 68.2,
+        "share": 50.9,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 68.8,
+        "share": 50.9,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 69.5,
+        "share": 50.9,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 69.9,
+        "share": 50.9,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 70.5,
+        "share": 50.9,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 71.2,
+        "share": 51.0,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 71.7,
+        "share": 51.0,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 72.4,
+        "share": 51.0,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 72.8,
+        "share": 51.0,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 73.3,
+        "share": 51.0,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 74.8,
+        "share": 51.1,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 75.2,
+        "share": 51.1,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 75.9,
+        "share": 51.1,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 77.0,
+        "share": 51.2,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 78.1,
+        "share": 51.2,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 79.1,
+        "share": 51.2,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 79.6,
+        "share": 51.3,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 80.8,
+        "share": 51.3,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 81.2,
+        "share": 51.3,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 81.8,
+        "share": 51.4,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 82.3,
+        "share": 51.4,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 83.0,
+        "share": 51.4,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 83.7,
+        "share": 51.4,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 84.2,
+        "share": 51.4,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 84.7,
+        "share": 51.4,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 85.2,
+        "share": 51.4,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 85.8,
+        "share": 51.4,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 86.4,
+        "share": 51.5,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 87.0,
+        "share": 51.5,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 87.7,
+        "share": 51.5,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 88.3,
+        "share": 51.5,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 88.7,
+        "share": 51.5,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 89.3,
+        "share": 51.5,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 89.7,
+        "share": 51.6,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 90.3,
+        "share": 51.6,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 90.9,
+        "share": 51.6,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 91.5,
+        "share": 51.6,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      },
+      {
+        "sections": 92.0,
+        "share": 51.6,
+        "fonte": "UOL — evolução da apuração, base com percentuais arredondados",
+        "precisao_pp": 0.1,
+        "observacao": "Publicação da apuração, não interpolação"
+      }
+    ],
+    "2026_2_tse_arquivo": [
+      {
+        "sections": 58.62,
+        "share": 50.48422095674747,
+        "lula": 36507520,
+        "flavio": 35807194,
+        "valid": 72314714,
+        "hora": "20:34:10",
+        "fonte": "EA20 arquivado por gabrielandr/apuracao-2026 (pontos do TSE)",
+        "precisao_pp": 0.01
+      },
+      {
+        "sections": 59.07,
+        "share": 50.49580467058693,
+        "lula": 36790858,
+        "flavio": 36068379,
+        "valid": 72859237,
+        "hora": "20:34:40",
+        "fonte": "EA20 arquivado por gabrielandr/apuracao-2026 (pontos do TSE)",
+        "precisao_pp": 0.01
+      },
+      {
+        "sections": 59.77,
+        "share": 50.51947147454901,
+        "lula": 37248024,
+        "flavio": 36482011,
+        "valid": 73730035,
+        "hora": "20:35:10",
+        "fonte": "EA20 arquivado por gabrielandr/apuracao-2026 (pontos do TSE)",
+        "precisao_pp": 0.01
+      },
+      {
+        "sections": 60.85,
+        "share": 50.54594101137042,
+        "lula": 37961372,
+        "flavio": 37141339,
+        "valid": 75102711,
+        "hora": "20:36:09",
+        "fonte": "EA20 arquivado por gabrielandr/apuracao-2026 (pontos do TSE)",
+        "precisao_pp": 0.01
+      },
+      {
+        "sections": 62.03,
+        "share": 50.5740081150584,
+        "lula": 38729627,
+        "flavio": 37850475,
+        "valid": 76580102,
+        "hora": "20:37:10",
+        "fonte": "EA20 arquivado por gabrielandr/apuracao-2026 (pontos do TSE)",
+        "precisao_pp": 0.01
+      },
+      {
+        "sections": 62.7,
+        "share": 50.600291052086014,
+        "lula": 39171177,
+        "flavio": 38241771,
+        "valid": 77412948,
+        "hora": "20:37:50",
+        "fonte": "EA20 arquivado por gabrielandr/apuracao-2026 (pontos do TSE)",
+        "precisao_pp": 0.01
+      }
+    ],
+    "2026_1_uol": [
+      {
+        "sections": 1.2,
+        "share": 46.498905908096276,
+        "pct_lula_all_valid": 42.5,
+        "pct_flavio_all_valid": 48.9,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 1.3,
+        "share": 46.498905908096276,
+        "pct_lula_all_valid": 42.5,
+        "pct_flavio_all_valid": 48.9,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 1.4,
+        "share": 46.28008752735229,
+        "pct_lula_all_valid": 42.3,
+        "pct_flavio_all_valid": 49.1,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 1.5,
+        "share": 46.1706783369803,
+        "pct_lula_all_valid": 42.2,
+        "pct_flavio_all_valid": 49.2,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 1.6,
+        "share": 46.1706783369803,
+        "pct_lula_all_valid": 42.2,
+        "pct_flavio_all_valid": 49.2,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 1.7,
+        "share": 46.1706783369803,
+        "pct_lula_all_valid": 42.2,
+        "pct_flavio_all_valid": 49.2,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 1.8,
+        "share": 46.1706783369803,
+        "pct_lula_all_valid": 42.2,
+        "pct_flavio_all_valid": 49.2,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 2.0,
+        "share": 46.01092896174863,
+        "pct_lula_all_valid": 42.1,
+        "pct_flavio_all_valid": 49.4,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 2.2,
+        "share": 46.01092896174863,
+        "pct_lula_all_valid": 42.1,
+        "pct_flavio_all_valid": 49.4,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 2.4,
+        "share": 45.90163934426229,
+        "pct_lula_all_valid": 42.0,
+        "pct_flavio_all_valid": 49.5,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 2.5,
+        "share": 45.84245076586433,
+        "pct_lula_all_valid": 41.9,
+        "pct_flavio_all_valid": 49.5,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 2.6,
+        "share": 45.84245076586433,
+        "pct_lula_all_valid": 41.9,
+        "pct_flavio_all_valid": 49.5,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 2.8,
+        "share": 45.68306010928962,
+        "pct_lula_all_valid": 41.8,
+        "pct_flavio_all_valid": 49.7,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 3.0,
+        "share": 45.514223194748354,
+        "pct_lula_all_valid": 41.6,
+        "pct_flavio_all_valid": 49.8,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 3.1,
+        "share": 45.40481400437636,
+        "pct_lula_all_valid": 41.5,
+        "pct_flavio_all_valid": 49.9,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 3.4,
+        "share": 45.40481400437636,
+        "pct_lula_all_valid": 41.5,
+        "pct_flavio_all_valid": 49.9,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 3.7,
+        "share": 45.3551912568306,
+        "pct_lula_all_valid": 41.5,
+        "pct_flavio_all_valid": 50.0,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 3.9,
+        "share": 45.24590163934426,
+        "pct_lula_all_valid": 41.4,
+        "pct_flavio_all_valid": 50.1,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 4.1,
+        "share": 45.24590163934426,
+        "pct_lula_all_valid": 41.4,
+        "pct_flavio_all_valid": 50.1,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 4.3,
+        "share": 45.13661202185792,
+        "pct_lula_all_valid": 41.3,
+        "pct_flavio_all_valid": 50.2,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 4.6,
+        "share": 45.13661202185792,
+        "pct_lula_all_valid": 41.3,
+        "pct_flavio_all_valid": 50.2,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 5.0,
+        "share": 45.02732240437158,
+        "pct_lula_all_valid": 41.2,
+        "pct_flavio_all_valid": 50.3,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 5.5,
+        "share": 44.91803278688525,
+        "pct_lula_all_valid": 41.1,
+        "pct_flavio_all_valid": 50.4,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 6.0,
+        "share": 44.86899563318777,
+        "pct_lula_all_valid": 41.1,
+        "pct_flavio_all_valid": 50.5,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 6.6,
+        "share": 44.75982532751092,
+        "pct_lula_all_valid": 41.0,
+        "pct_flavio_all_valid": 50.6,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 7.0,
+        "share": 44.71101417666303,
+        "pct_lula_all_valid": 41.0,
+        "pct_flavio_all_valid": 50.7,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 7.6,
+        "share": 44.71101417666303,
+        "pct_lula_all_valid": 41.0,
+        "pct_flavio_all_valid": 50.7,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 8.2,
+        "share": 44.60196292257361,
+        "pct_lula_all_valid": 40.9,
+        "pct_flavio_all_valid": 50.8,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 9.1,
+        "share": 44.66230936819172,
+        "pct_lula_all_valid": 41.0,
+        "pct_flavio_all_valid": 50.8,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 10.1,
+        "share": 44.44444444444444,
+        "pct_lula_all_valid": 40.8,
+        "pct_flavio_all_valid": 51.0,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 10.9,
+        "share": 44.33551198257081,
+        "pct_lula_all_valid": 40.7,
+        "pct_flavio_all_valid": 51.1,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 12.4,
+        "share": 44.33551198257081,
+        "pct_lula_all_valid": 40.7,
+        "pct_flavio_all_valid": 51.1,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 14.2,
+        "share": 44.28726877040261,
+        "pct_lula_all_valid": 40.7,
+        "pct_flavio_all_valid": 51.2,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 17.2,
+        "share": 44.28726877040261,
+        "pct_lula_all_valid": 40.7,
+        "pct_flavio_all_valid": 51.2,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 19.5,
+        "share": 44.28726877040261,
+        "pct_lula_all_valid": 40.7,
+        "pct_flavio_all_valid": 51.2,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 22.0,
+        "share": 44.39608269858541,
+        "pct_lula_all_valid": 40.8,
+        "pct_flavio_all_valid": 51.1,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 24.4,
+        "share": 44.613710554951034,
+        "pct_lula_all_valid": 41.0,
+        "pct_flavio_all_valid": 50.9,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 27.9,
+        "share": 44.613710554951034,
+        "pct_lula_all_valid": 41.0,
+        "pct_flavio_all_valid": 50.9,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 31.9,
+        "share": 44.77124183006536,
+        "pct_lula_all_valid": 41.1,
+        "pct_flavio_all_valid": 50.7,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 36.6,
+        "share": 44.88017429193899,
+        "pct_lula_all_valid": 41.2,
+        "pct_flavio_all_valid": 50.6,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 41.6,
+        "share": 45.09803921568628,
+        "pct_lula_all_valid": 41.4,
+        "pct_flavio_all_valid": 50.4,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 47.3,
+        "share": 45.31590413943355,
+        "pct_lula_all_valid": 41.6,
+        "pct_flavio_all_valid": 50.2,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 64.8,
+        "share": 46.028291621327526,
+        "pct_lula_all_valid": 42.3,
+        "pct_flavio_all_valid": 49.6,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 85.0,
+        "share": 47.28260869565217,
+        "pct_lula_all_valid": 43.5,
+        "pct_flavio_all_valid": 48.5,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 88.3,
+        "share": 47.608695652173914,
+        "pct_lula_all_valid": 43.8,
+        "pct_flavio_all_valid": 48.2,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 88.6,
+        "share": 47.608695652173914,
+        "pct_lula_all_valid": 43.8,
+        "pct_flavio_all_valid": 48.2,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 89.1,
+        "share": 47.71739130434783,
+        "pct_lula_all_valid": 43.9,
+        "pct_flavio_all_valid": 48.1,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 89.5,
+        "share": 47.71739130434783,
+        "pct_lula_all_valid": 43.9,
+        "pct_flavio_all_valid": 48.1,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 90.0,
+        "share": 47.77415852334419,
+        "pct_lula_all_valid": 44.0,
+        "pct_flavio_all_valid": 48.1,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 90.3,
+        "share": 47.82608695652174,
+        "pct_lula_all_valid": 44.0,
+        "pct_flavio_all_valid": 48.0,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 90.9,
+        "share": 47.82608695652174,
+        "pct_lula_all_valid": 44.0,
+        "pct_flavio_all_valid": 48.0,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 91.1,
+        "share": 47.82608695652174,
+        "pct_lula_all_valid": 44.0,
+        "pct_flavio_all_valid": 48.0,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 91.6,
+        "share": 47.93478260869565,
+        "pct_lula_all_valid": 44.1,
+        "pct_flavio_all_valid": 47.9,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 92.0,
+        "share": 47.93478260869565,
+        "pct_lula_all_valid": 44.1,
+        "pct_flavio_all_valid": 47.9,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 92.3,
+        "share": 47.991313789359396,
+        "pct_lula_all_valid": 44.2,
+        "pct_flavio_all_valid": 47.9,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 92.7,
+        "share": 48.04347826086956,
+        "pct_lula_all_valid": 44.2,
+        "pct_flavio_all_valid": 47.8,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 93.1,
+        "share": 48.099891422366994,
+        "pct_lula_all_valid": 44.3,
+        "pct_flavio_all_valid": 47.8,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 93.6,
+        "share": 48.099891422366994,
+        "pct_lula_all_valid": 44.3,
+        "pct_flavio_all_valid": 47.8,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 94.2,
+        "share": 48.20846905537459,
+        "pct_lula_all_valid": 44.4,
+        "pct_flavio_all_valid": 47.7,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 94.5,
+        "share": 48.20846905537459,
+        "pct_lula_all_valid": 44.4,
+        "pct_flavio_all_valid": 47.7,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 95.0,
+        "share": 48.3170466883822,
+        "pct_lula_all_valid": 44.5,
+        "pct_flavio_all_valid": 47.6,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 95.6,
+        "share": 48.3170466883822,
+        "pct_lula_all_valid": 44.5,
+        "pct_flavio_all_valid": 47.6,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 96.0,
+        "share": 48.369565217391305,
+        "pct_lula_all_valid": 44.5,
+        "pct_flavio_all_valid": 47.5,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 96.4,
+        "share": 48.4256243213898,
+        "pct_lula_all_valid": 44.6,
+        "pct_flavio_all_valid": 47.5,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 96.8,
+        "share": 48.4256243213898,
+        "pct_lula_all_valid": 44.6,
+        "pct_flavio_all_valid": 47.5,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 97.2,
+        "share": 48.534201954397396,
+        "pct_lula_all_valid": 44.7,
+        "pct_flavio_all_valid": 47.4,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 97.7,
+        "share": 48.534201954397396,
+        "pct_lula_all_valid": 44.7,
+        "pct_flavio_all_valid": 47.4,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 98.0,
+        "share": 48.59002169197397,
+        "pct_lula_all_valid": 44.8,
+        "pct_flavio_all_valid": 47.4,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 98.2,
+        "share": 48.642779587404995,
+        "pct_lula_all_valid": 44.8,
+        "pct_flavio_all_valid": 47.3,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 98.5,
+        "share": 48.698481561822135,
+        "pct_lula_all_valid": 44.9,
+        "pct_flavio_all_valid": 47.3,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 98.8,
+        "share": 48.7513572204126,
+        "pct_lula_all_valid": 44.9,
+        "pct_flavio_all_valid": 47.2,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 99.0,
+        "share": 48.80694143167028,
+        "pct_lula_all_valid": 45.0,
+        "pct_flavio_all_valid": 47.2,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 99.4,
+        "share": 48.8599348534202,
+        "pct_lula_all_valid": 45.0,
+        "pct_flavio_all_valid": 47.1,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 99.7,
+        "share": 48.915401301518436,
+        "pct_lula_all_valid": 45.1,
+        "pct_flavio_all_valid": 47.1,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 99.9,
+        "share": 48.915401301518436,
+        "pct_lula_all_valid": 45.1,
+        "pct_flavio_all_valid": 47.1,
+        "source": "UOL · tabela de evolução da apuração",
+        "precision": "percentuais dos candidatos arredondados a 0,1 p.p.",
+        "source_url": "https://noticias.uol.com.br/eleicoes/2026/apuracao/"
+      },
+      {
+        "sections": 100,
+        "share": 48.98850552326951,
+        "pct_lula_all_valid": 45.1627679106361,
+        "pct_flavio_all_valid": 47.02777235637371,
+        "source": "TSE EA20 · resultado final oficial",
+        "precision": "total nacional oficial",
+        "source_url": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/br/br-c0001-e006257-u.json"
+      }
+    ]
+  },
+  "ufs": [
+    {
+      "uf": "AC",
+      "nome": "Acre",
+      "regiao": "Norte",
+      "t1": {
+        "lula": 134770,
+        "flavio": 302807,
+        "valid": 469066,
+        "pair": 30.799150778034495,
+        "raw": 28.731564428033582,
+        "electorate": 613742,
+        "turnout": 488330,
+        "abst": 125412,
+        "abst_pct": 20.433993436981662,
+        "blank": 5579,
+        "null": 13662,
+        "null_pct": 2.797698277803944,
+        "blank_pct": 1.1424651362807938
+      },
+      "t2": {
+        "lula": 144513,
+        "flavio": 287715,
+        "valid": 432228,
+        "pair": 33.434437380271525,
+        "raw": 33.434437380271525,
+        "electorate": 613715,
+        "turnout": 453654,
+        "abst": 160061,
+        "abst_pct": 26.080672624915472,
+        "blank": 5016,
+        "null": 16410,
+        "null_pct": 3.6172942374585038,
+        "blank_pct": 1.105688476239601
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/ac/ac-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/ac/ac-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 2.6352866022370307,
+        "raw_pp": 4.702872952237943,
+        "votos_lula": 9743,
+        "votos_flavio": -15092,
+        "abst_pp": 5.64667918793381,
+        "null_pp": 0.8195959596545599,
+        "brancos_pp": -0.03677666004119273
+      }
+    },
+    {
+      "uf": "AL",
+      "nome": "Alagoas",
+      "regiao": "Nordeste",
+      "t1": {
+        "lula": 995459,
+        "flavio": 735718,
+        "valid": 1818856,
+        "pair": 57.50186145033119,
+        "raw": 54.72995113411947,
+        "electorate": 2442126,
+        "turnout": 1938428,
+        "abst": 503698,
+        "abst_pct": 20.6253895171666,
+        "blank": 33712,
+        "null": 85787,
+        "null_pct": 4.42559641111251,
+        "blank_pct": 1.7391412010144303
+      },
+      "t2": {
+        "lula": 1152621,
+        "flavio": 744140,
+        "valid": 1896761,
+        "pair": 60.76785636144986,
+        "raw": 60.76785636144986,
+        "electorate": 2442081,
+        "turnout": 1951632,
+        "abst": 490449,
+        "abst_pct": 20.083240482195308,
+        "blank": 16983,
+        "null": 37888,
+        "null_pct": 1.941349598694836,
+        "blank_pct": 0.8701947908212204
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/al/al-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/al/al-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 3.2659949111186677,
+        "raw_pp": 6.037905227330391,
+        "votos_lula": 157162,
+        "votos_flavio": 8422,
+        "abst_pp": -0.5421490349712919,
+        "null_pp": -2.484246812417674,
+        "brancos_pp": -0.8689464101932098
+      }
+    },
+    {
+      "uf": "AM",
+      "nome": "Amazonas",
+      "regiao": "Norte",
+      "t1": {
+        "lula": 1046996,
+        "flavio": 976764,
+        "valid": 2170763,
+        "pair": 51.73518599043365,
+        "raw": 48.23170470475128,
+        "electorate": 2798611,
+        "turnout": 2234549,
+        "abst": 564062,
+        "abst_pct": 20.155069782831553,
+        "blank": 24402,
+        "null": 39302,
+        "null_pct": 1.7588336617366636,
+        "blank_pct": 1.0920324414456788
+      },
+      "t2": {
+        "lula": 1145783,
+        "flavio": 975245,
+        "valid": 2121028,
+        "pair": 54.02017323675123,
+        "raw": 54.02017323675123,
+        "electorate": 2798661,
+        "turnout": 2192059,
+        "abst": 606602,
+        "abst_pct": 21.67472230470214,
+        "blank": 18324,
+        "null": 52707,
+        "null_pct": 2.4044517049951666,
+        "blank_pct": 0.8359264052655517
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/am/am-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/am/am-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 2.284987246317584,
+        "raw_pp": 5.788468531999953,
+        "votos_lula": 98787,
+        "votos_flavio": -1519,
+        "abst_pp": 1.5196525218705865,
+        "null_pp": 0.645618043258503,
+        "brancos_pp": -0.25610603618012706
+      }
+    },
+    {
+      "uf": "AP",
+      "nome": "Amapá",
+      "regiao": "Norte",
+      "t1": {
+        "lula": 212503,
+        "flavio": 212278,
+        "valid": 464858,
+        "pair": 50.02648423540601,
+        "raw": 45.71352972305521,
+        "electorate": 576988,
+        "turnout": 476562,
+        "abst": 100426,
+        "abst_pct": 17.40521466650953,
+        "blank": 4415,
+        "null": 7272,
+        "null_pct": 1.5259294698276404,
+        "blank_pct": 0.9264272014973918
+      },
+      "t2": {
+        "lula": 222968,
+        "flavio": 198674,
+        "valid": 421642,
+        "pair": 52.880879988236465,
+        "raw": 52.880879988236465,
+        "electorate": 576910,
+        "turnout": 429975,
+        "abst": 146935,
+        "abst_pct": 25.46931063770779,
+        "blank": 3320,
+        "null": 5013,
+        "null_pct": 1.1658817373103088,
+        "blank_pct": 0.7721379149950579
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/ap/ap-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/ap/ap-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 2.854395752830456,
+        "raw_pp": 7.1673502651812555,
+        "votos_lula": 10465,
+        "votos_flavio": -13604,
+        "abst_pp": 8.06409597119826,
+        "null_pp": -0.3600477325173317,
+        "brancos_pp": -0.15428928650233387
+      }
+    },
+    {
+      "uf": "BA",
+      "nome": "Bahia",
+      "regiao": "Nordeste",
+      "t1": {
+        "lula": 5664771,
+        "flavio": 2442585,
+        "valid": 8560291,
+        "pair": 69.87199032582262,
+        "raw": 66.17498166826338,
+        "electorate": 11312752,
+        "turnout": 9053601,
+        "abst": 2259151,
+        "abst_pct": 19.96995072463358,
+        "blank": 154936,
+        "null": 338123,
+        "null_pct": 3.7346797147345017,
+        "blank_pct": 1.7113190651984773
+      },
+      "t2": {
+        "lula": 6485258,
+        "flavio": 2608761,
+        "valid": 9094019,
+        "pair": 71.31344238449469,
+        "raw": 71.31344238449469,
+        "electorate": 11312891,
+        "turnout": 9422047,
+        "abst": 1890844,
+        "abst_pct": 16.714065396723083,
+        "blank": 92721,
+        "null": 235307,
+        "null_pct": 2.497408471853303,
+        "blank_pct": 0.9840855177224227
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/ba/ba-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/ba/ba-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 1.4414520586720698,
+        "raw_pp": 5.138460716231307,
+        "votos_lula": 820487,
+        "votos_flavio": 166176,
+        "abst_pp": -3.255885327910498,
+        "null_pp": -1.2372712428811985,
+        "brancos_pp": -0.7272335474760546
+      }
+    },
+    {
+      "uf": "CE",
+      "nome": "Ceará",
+      "regiao": "Nordeste",
+      "t1": {
+        "lula": 3555263,
+        "flavio": 1756850,
+        "valid": 5617814,
+        "pair": 66.92747311662986,
+        "raw": 63.285523515018475,
+        "electorate": 6996545,
+        "turnout": 5910471,
+        "abst": 1086074,
+        "abst_pct": 15.523004568683543,
+        "blank": 103295,
+        "null": 189185,
+        "null_pct": 3.2008447380927847,
+        "blank_pct": 1.7476610578074065
+      },
+      "t2": {
+        "lula": 4036124,
+        "flavio": 1819478,
+        "valid": 5855602,
+        "pair": 68.9275671399798,
+        "raw": 68.9275671399798,
+        "electorate": 6996521,
+        "turnout": 6024843,
+        "abst": 971678,
+        "abst_pct": 13.888016629979386,
+        "blank": 56386,
+        "null": 112855,
+        "null_pct": 1.8731608441912926,
+        "blank_pct": 0.9358916074659539
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/ce/ce-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/ce/ce-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 2.000094023349945,
+        "raw_pp": 5.642043624961325,
+        "votos_lula": 480861,
+        "votos_flavio": 62628,
+        "abst_pp": -1.6349879387041568,
+        "null_pp": -1.327683893901492,
+        "brancos_pp": -0.8117694503414526
+      }
+    },
+    {
+      "uf": "DF",
+      "nome": "Distrito Federal",
+      "regiao": "Centro-Oeste",
+      "t1": {
+        "lula": 675627,
+        "flavio": 909616,
+        "valid": 1772808,
+        "pair": 42.619775012411345,
+        "raw": 38.11055681156674,
+        "electorate": 2258320,
+        "turnout": 1831396,
+        "abst": 426924,
+        "abst_pct": 18.904495377094477,
+        "blank": 25362,
+        "null": 33169,
+        "null_pct": 1.8111320544546345,
+        "blank_pct": 1.384845221896302
+      },
+      "t2": {
+        "lula": 825224,
+        "flavio": 979542,
+        "valid": 1804766,
+        "pair": 45.724708909631495,
+        "raw": 45.724708909631495,
+        "electorate": 2258995,
+        "turnout": 1868280,
+        "abst": 390715,
+        "abst_pct": 17.295965683854988,
+        "blank": 22386,
+        "null": 41128,
+        "null_pct": 2.2013830903290725,
+        "blank_pct": 1.1982144004110733
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/df/df-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/df/df-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 3.1049338972201497,
+        "raw_pp": 7.614152098064757,
+        "votos_lula": 149597,
+        "votos_flavio": 69926,
+        "abst_pp": -1.6085296932394897,
+        "null_pp": 0.390251035874438,
+        "brancos_pp": -0.1866308214852288
+      }
+    },
+    {
+      "uf": "ES",
+      "nome": "Espírito Santo",
+      "regiao": "Sudeste",
+      "t1": {
+        "lula": 850028,
+        "flavio": 1233194,
+        "valid": 2251078,
+        "pair": 40.80352454035144,
+        "raw": 37.76093054083422,
+        "electorate": 2991650,
+        "turnout": 2352282,
+        "abst": 639368,
+        "abst_pct": 21.371751374659468,
+        "blank": 43211,
+        "null": 57872,
+        "null_pct": 2.4602492388242565,
+        "blank_pct": 1.8369821305438718
+      },
+      "t2": {
+        "lula": 1001965,
+        "flavio": 1294504,
+        "valid": 2296469,
+        "pair": 43.63067822818422,
+        "raw": 43.63067822818422,
+        "electorate": 2991515,
+        "turnout": 2409214,
+        "abst": 582301,
+        "abst_pct": 19.465087087980503,
+        "blank": 33080,
+        "null": 79665,
+        "null_pct": 3.306680103967518,
+        "blank_pct": 1.3730619197796459
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/es/es-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/es/es-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 2.8271536878327836,
+        "raw_pp": 5.8697476873500065,
+        "votos_lula": 151937,
+        "votos_flavio": 61310,
+        "abst_pp": -1.9066642866789643,
+        "null_pp": 0.8464308651432617,
+        "brancos_pp": -0.46392021076422596
+      }
+    },
+    {
+      "uf": "GO",
+      "nome": "Goiás",
+      "regiao": "Centro-Oeste",
+      "t1": {
+        "lula": 1188880,
+        "flavio": 2051888,
+        "valid": 3827823,
+        "pair": 36.68513142563738,
+        "raw": 31.058907373721304,
+        "electorate": 5080590,
+        "turnout": 3971587,
+        "abst": 1109003,
+        "abst_pct": 21.828232547794645,
+        "blank": 45643,
+        "null": 98014,
+        "null_pct": 2.467879968385434,
+        "blank_pct": 1.1492383271473092
+      },
+      "t2": {
+        "lula": 1585555,
+        "flavio": 2345334,
+        "valid": 3930889,
+        "pair": 40.3357866375774,
+        "raw": 40.3357866375774,
+        "electorate": 5080385,
+        "turnout": 4047280,
+        "abst": 1033105,
+        "abst_pct": 20.335171448620528,
+        "blank": 43214,
+        "null": 73177,
+        "null_pct": 1.808053804036291,
+        "blank_pct": 1.0677294380423394
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/go/go-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/go/go-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 3.6506552119400197,
+        "raw_pp": 9.276879263856095,
+        "votos_lula": 396675,
+        "votos_flavio": 293446,
+        "abst_pp": -1.493061099174117,
+        "null_pp": -0.659826164349143,
+        "brancos_pp": -0.08150888910496978
+      }
+    },
+    {
+      "uf": "MA",
+      "nome": "Maranhão",
+      "regiao": "Nordeste",
+      "t1": {
+        "lula": 2566301,
+        "flavio": 1239040,
+        "valid": 4010439,
+        "pair": 67.43944892192316,
+        "raw": 63.990525725487906,
+        "electorate": 5183115,
+        "turnout": 4160343,
+        "abst": 1022772,
+        "abst_pct": 19.732766878604853,
+        "blank": 46315,
+        "null": 103244,
+        "null_pct": 2.481622308545233,
+        "blank_pct": 1.113249556587041
+      },
+      "t2": {
+        "lula": 2808231,
+        "flavio": 1229971,
+        "valid": 4038202,
+        "pair": 69.54161777939787,
+        "raw": 69.54161777939787,
+        "electorate": 5183049,
+        "turnout": 4127771,
+        "abst": 1055278,
+        "abst_pct": 20.360177957028768,
+        "blank": 30855,
+        "null": 58714,
+        "null_pct": 1.422414179468774,
+        "blank_pct": 0.7474978626479036
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/ma/ma-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/ma/ma-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 2.102168857474709,
+        "raw_pp": 5.5510920539099615,
+        "votos_lula": 241930,
+        "votos_flavio": -9069,
+        "abst_pp": 0.6274110784239149,
+        "null_pp": -1.0592081290764592,
+        "brancos_pp": -0.3657516939391374
+      }
+    },
+    {
+      "uf": "MG",
+      "nome": "Minas Gerais",
+      "regiao": "Sudeste",
+      "t1": {
+        "lula": 5188936,
+        "flavio": 5777548,
+        "valid": 11976235,
+        "pair": 47.31631396170368,
+        "raw": 43.32693872489977,
+        "electorate": 16372372,
+        "turnout": 12637274,
+        "abst": 3735098,
+        "abst_pct": 22.813420071325034,
+        "blank": 268302,
+        "null": 392176,
+        "null_pct": 3.1033275055997045,
+        "blank_pct": 2.123100282545112
+      },
+      "t2": {
+        "lula": 6351099,
+        "flavio": 6241786,
+        "valid": 12592885,
+        "pair": 50.43402683340632,
+        "raw": 50.43402683340632,
+        "electorate": 16372144,
+        "turnout": 13044203,
+        "abst": 3327941,
+        "abst_pct": 20.32684906753813,
+        "blank": 164141,
+        "null": 287177,
+        "null_pct": 2.201568006876311,
+        "blank_pct": 1.2583444155231256
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/mg/mg-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/mg/mg-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 3.1177128717026434,
+        "raw_pp": 7.107088108506552,
+        "votos_lula": 1162163,
+        "votos_flavio": 464238,
+        "abst_pp": -2.486571003786903,
+        "null_pp": -0.9017594987233934,
+        "brancos_pp": -0.8647558670219866
+      }
+    },
+    {
+      "uf": "MS",
+      "nome": "Mato Grosso do Sul",
+      "regiao": "Centro-Oeste",
+      "t1": {
+        "lula": 516855,
+        "flavio": 873351,
+        "valid": 1490278,
+        "pair": 37.17830307163111,
+        "raw": 34.68178420402099,
+        "electorate": 2024430,
+        "turnout": 1541220,
+        "abst": 483210,
+        "abst_pct": 23.868940887064507,
+        "blank": 21270,
+        "null": 29596,
+        "null_pct": 1.9202969076445933,
+        "blank_pct": 1.38007552458442
+      },
+      "t2": {
+        "lula": 628973,
+        "flavio": 927892,
+        "valid": 1556865,
+        "pair": 40.399970453443295,
+        "raw": 40.399970453443295,
+        "electorate": 2024437,
+        "turnout": 1594460,
+        "abst": 429977,
+        "abst_pct": 21.23933715892369,
+        "blank": 14958,
+        "null": 22637,
+        "null_pct": 1.4197283092708504,
+        "blank_pct": 0.9381232517592163
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/ms/ms-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/ms/ms-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 3.221667381812182,
+        "raw_pp": 5.718186249422303,
+        "votos_lula": 112118,
+        "votos_flavio": 54541,
+        "abst_pp": -2.629603728140818,
+        "null_pp": -0.5005685983737429,
+        "brancos_pp": -0.4419522728252038
+      }
+    },
+    {
+      "uf": "MT",
+      "nome": "Mato Grosso",
+      "regiao": "Centro-Oeste",
+      "t1": {
+        "lula": 581681,
+        "flavio": 1298581,
+        "valid": 1993288,
+        "pair": 30.936167406457184,
+        "raw": 29.181984740790092,
+        "electorate": 2637801,
+        "turnout": 2052133,
+        "abst": 585668,
+        "abst_pct": 22.2028879358223,
+        "blank": 20756,
+        "null": 37994,
+        "null_pct": 1.8514394534857146,
+        "blank_pct": 1.0114354186595118
+      },
+      "t2": {
+        "lula": 694167,
+        "flavio": 1351099,
+        "valid": 2045266,
+        "pair": 33.94018186387492,
+        "raw": 33.94018186387492,
+        "electorate": 2637879,
+        "turnout": 2085334,
+        "abst": 552545,
+        "abst_pct": 20.946563508030504,
+        "blank": 15431,
+        "null": 24637,
+        "null_pct": 1.181441438158108,
+        "blank_pct": 0.7399773849177158
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/mt/mt-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/mt/mt-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 3.0040144574177354,
+        "raw_pp": 4.758197123084827,
+        "votos_lula": 112486,
+        "votos_flavio": 52518,
+        "abst_pp": -1.256324427791796,
+        "null_pp": -0.6699980153276066,
+        "brancos_pp": -0.271458033741796
+      }
+    },
+    {
+      "uf": "PA",
+      "nome": "Pará",
+      "regiao": "Norte",
+      "t1": {
+        "lula": 2427237,
+        "flavio": 2163957,
+        "valid": 4863172,
+        "pair": 52.867228002127554,
+        "raw": 49.91057277020019,
+        "electorate": 6262397,
+        "turnout": 5066504,
+        "abst": 1195893,
+        "abst_pct": 19.096409889056858,
+        "blank": 54203,
+        "null": 148946,
+        "null_pct": 2.939818067843231,
+        "blank_pct": 1.0698303998180994
+      },
+      "t2": {
+        "lula": 2690449,
+        "flavio": 2199940,
+        "valid": 4890389,
+        "pair": 55.01503050166357,
+        "raw": 55.01503050166357,
+        "electorate": 6262063,
+        "turnout": 4989573,
+        "abst": 1272490,
+        "abst_pct": 20.320619578563807,
+        "blank": 36501,
+        "null": 62683,
+        "null_pct": 1.2562798459908293,
+        "blank_pct": 0.7315455651215044
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/pa/pa-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/pa/pa-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 2.147802499536013,
+        "raw_pp": 5.104457731463377,
+        "votos_lula": 263212,
+        "votos_flavio": 35983,
+        "abst_pp": 1.2242096895069494,
+        "null_pp": -1.6835382218524015,
+        "brancos_pp": -0.338284834696595
+      }
+    },
+    {
+      "uf": "PB",
+      "nome": "Paraíba",
+      "regiao": "Nordeste",
+      "t1": {
+        "lula": 1541127,
+        "flavio": 831377,
+        "valid": 2513747,
+        "pair": 64.95782515013673,
+        "raw": 61.30795979070288,
+        "electorate": 3248531,
+        "turnout": 2683988,
+        "abst": 564543,
+        "abst_pct": 17.378408886970757,
+        "blank": 52297,
+        "null": 117854,
+        "null_pct": 4.391003238464553,
+        "blank_pct": 1.9484811407502567
+      },
+      "t2": {
+        "lula": 1794059,
+        "flavio": 865210,
+        "valid": 2659269,
+        "pair": 67.46436708734619,
+        "raw": 67.46436708734619,
+        "electorate": 3248434,
+        "turnout": 2743560,
+        "abst": 504874,
+        "abst_pct": 15.54207350372518,
+        "blank": 25943,
+        "null": 58348,
+        "null_pct": 2.1267258598317516,
+        "blank_pct": 0.9455962326320547
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/pb/pb-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/pb/pb-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 2.5065419372094624,
+        "raw_pp": 6.156407296643309,
+        "votos_lula": 252932,
+        "votos_flavio": 33833,
+        "abst_pp": -1.8363353832455775,
+        "null_pp": -2.264277378632802,
+        "brancos_pp": -1.0028849081182019
+      }
+    },
+    {
+      "uf": "PE",
+      "nome": "Pernambuco",
+      "regiao": "Nordeste",
+      "t1": {
+        "lula": 3553971,
+        "flavio": 1738043,
+        "valid": 5601017,
+        "pair": 67.15724863917593,
+        "raw": 63.45224447631564,
+        "electorate": 7223450,
+        "turnout": 5911062,
+        "abst": 1312388,
+        "abst_pct": 18.168437519467844,
+        "blank": 109491,
+        "null": 200416,
+        "null_pct": 3.390524409996038,
+        "blank_pct": 1.8523067428492546
+      },
+      "t2": {
+        "lula": 4117513,
+        "flavio": 1832554,
+        "valid": 5950067,
+        "pair": 69.20111992016224,
+        "raw": 69.20111992016224,
+        "electorate": 7223227,
+        "turnout": 6126467,
+        "abst": 1096760,
+        "abst_pct": 15.183795275989526,
+        "blank": 56758,
+        "null": 119642,
+        "null_pct": 1.9528710429681577,
+        "blank_pct": 0.9264393328161239
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/pe/pe-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/pe/pe-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 2.043871280986309,
+        "raw_pp": 5.7488754438466,
+        "votos_lula": 563542,
+        "votos_flavio": 94511,
+        "abst_pp": -2.9846422434783175,
+        "null_pp": -1.4376533670278804,
+        "brancos_pp": -0.9258674100331307
+      }
+    },
+    {
+      "uf": "PI",
+      "nome": "Piauí",
+      "regiao": "Nordeste",
+      "t1": {
+        "lula": 1523710,
+        "flavio": 517028,
+        "valid": 2146394,
+        "pair": 74.66465562948306,
+        "raw": 70.98929646653876,
+        "electorate": 2704758,
+        "turnout": 2240883,
+        "abst": 463875,
+        "abst_pct": 17.1503328578749,
+        "blank": 28329,
+        "null": 66108,
+        "null_pct": 2.9500870862066426,
+        "blank_pct": 1.2641891611476368
+      },
+      "t2": {
+        "lula": 1653989,
+        "flavio": 525859,
+        "valid": 2179848,
+        "pair": 75.87634550665918,
+        "raw": 75.87634550665918,
+        "electorate": 2704695,
+        "turnout": 2239830,
+        "abst": 464865,
+        "abst_pct": 17.187335355742515,
+        "blank": 16137,
+        "null": 43845,
+        "null_pct": 1.9575146328069541,
+        "blank_pct": 0.720456463213726
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/pi/pi-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/pi/pi-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 1.2116898771761129,
+        "raw_pp": 4.8870490401204165,
+        "votos_lula": 130279,
+        "votos_flavio": 8831,
+        "abst_pp": 0.03700249786761489,
+        "null_pp": -0.9925724533996885,
+        "brancos_pp": -0.5437326979339108
+      }
+    },
+    {
+      "uf": "PR",
+      "nome": "Paraná",
+      "regiao": "Sul",
+      "t1": {
+        "lula": 2054597,
+        "flavio": 3945345,
+        "valid": 6585243,
+        "pair": 34.243614354938764,
+        "raw": 31.20001797959468,
+        "electorate": 8613657,
+        "turnout": 6841457,
+        "abst": 1772200,
+        "abst_pct": 20.57430427053225,
+        "blank": 122499,
+        "null": 133447,
+        "null_pct": 1.9505640392097765,
+        "blank_pct": 1.7905396467448382
+      },
+      "t2": {
+        "lula": 2566504,
+        "flavio": 4291444,
+        "valid": 6857948,
+        "pair": 37.42378915675651,
+        "raw": 37.42378915675651,
+        "electorate": 8613628,
+        "turnout": 7059339,
+        "abst": 1554289,
+        "abst_pct": 18.04453361580045,
+        "blank": 82572,
+        "null": 118819,
+        "null_pct": 1.6831462549114018,
+        "blank_pct": 1.1696845837832692
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/pr/pr-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/pr/pr-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 3.180174801817749,
+        "raw_pp": 6.223771177161833,
+        "votos_lula": 511907,
+        "votos_flavio": 346099,
+        "abst_pp": -2.5297706547317986,
+        "null_pp": -0.2674177842983747,
+        "brancos_pp": -0.620855062961569
+      }
+    },
+    {
+      "uf": "RJ",
+      "nome": "Rio de Janeiro",
+      "regiao": "Sudeste",
+      "t1": {
+        "lula": 3693021,
+        "flavio": 4966844,
+        "valid": 9369700,
+        "pair": 42.645249088756,
+        "raw": 39.414506334247626,
+        "electorate": 12857648,
+        "turnout": 9859802,
+        "abst": 2997846,
+        "abst_pct": 23.31566395346956,
+        "blank": 201979,
+        "null": 287736,
+        "null_pct": 2.9182736123909994,
+        "blank_pct": 2.048509696239336
+      },
+      "t2": {
+        "lula": 4565393,
+        "flavio": 5169033,
+        "valid": 9734426,
+        "pair": 46.89945765677401,
+        "raw": 46.89945765677401,
+        "electorate": 12857526,
+        "turnout": 10077449,
+        "abst": 2780077,
+        "abst_pct": 21.622176770243357,
+        "blank": 111682,
+        "null": 231341,
+        "null_pct": 2.295630570792271,
+        "blank_pct": 1.1082368166785066
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/rj/rj-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/rj/rj-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 4.254208568018008,
+        "raw_pp": 7.484951322526385,
+        "votos_lula": 872372,
+        "votos_flavio": 202189,
+        "abst_pp": -1.6934871832262033,
+        "null_pp": -0.6226430415987285,
+        "brancos_pp": -0.9402728795608295
+      }
+    },
+    {
+      "uf": "RN",
+      "nome": "Rio Grande do Norte",
+      "regiao": "Nordeste",
+      "t1": {
+        "lula": 1237963,
+        "flavio": 720493,
+        "valid": 2071898,
+        "pair": 63.21117247464329,
+        "raw": 59.75019040512612,
+        "electorate": 2659825,
+        "turnout": 2171013,
+        "abst": 488812,
+        "abst_pct": 18.37760003007717,
+        "blank": 33172,
+        "null": 65880,
+        "null_pct": 3.0345281212042488,
+        "blank_pct": 1.5279503162809251
+      },
+      "t2": {
+        "lula": 1413596,
+        "flavio": 737409,
+        "valid": 2151005,
+        "pair": 65.7179318504606,
+        "raw": 65.7179318504606,
+        "electorate": 2659867,
+        "turnout": 2232823,
+        "abst": 427044,
+        "abst_pct": 16.05508846870915,
+        "blank": 19939,
+        "null": 61879,
+        "null_pct": 2.77133476321231,
+        "blank_pct": 0.8929951008207995
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/rn/rn-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/rn/rn-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 2.5067593758173103,
+        "raw_pp": 5.967741445334482,
+        "votos_lula": 175633,
+        "votos_flavio": 16916,
+        "abst_pp": -2.3225115613680174,
+        "null_pp": -0.26319335799193855,
+        "brancos_pp": -0.6349552154601257
+      }
+    },
+    {
+      "uf": "RO",
+      "nome": "Rondônia",
+      "regiao": "Norte",
+      "t1": {
+        "lula": 250667,
+        "flavio": 652988,
+        "valid": 968059,
+        "pair": 27.739236766243753,
+        "raw": 25.89377300350495,
+        "electorate": 1265893,
+        "turnout": 991080,
+        "abst": 274813,
+        "abst_pct": 21.709022800505256,
+        "blank": 9846,
+        "null": 13109,
+        "null_pct": 1.3226984703555718,
+        "blank_pct": 0.9934616781692699
+      },
+      "t2": {
+        "lula": 294446,
+        "flavio": 674382,
+        "valid": 968828,
+        "pair": 30.39197876196807,
+        "raw": 30.39197876196807,
+        "electorate": 1265926,
+        "turnout": 988489,
+        "abst": 277437,
+        "abst_pct": 21.915735990887303,
+        "blank": 8361,
+        "null": 11300,
+        "null_pct": 1.14315890212233,
+        "blank_pct": 0.8458364230659117
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/ro/ro-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/ro/ro-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 2.652741995724316,
+        "raw_pp": 4.4982057584631185,
+        "votos_lula": 43779,
+        "votos_flavio": 21394,
+        "abst_pp": 0.20671319038204672,
+        "null_pp": -0.1795395682332417,
+        "brancos_pp": -0.14762525510335822
+      }
+    },
+    {
+      "uf": "RR",
+      "nome": "Roraima",
+      "regiao": "Norte",
+      "t1": {
+        "lula": 74420,
+        "flavio": 231322,
+        "valid": 325545,
+        "pair": 24.340784059762807,
+        "raw": 22.860126864181602,
+        "electorate": 401521,
+        "turnout": 332772,
+        "abst": 68749,
+        "abst_pct": 17.12214305104839,
+        "blank": 2618,
+        "null": 4595,
+        "null_pct": 1.3808253098217398,
+        "blank_pct": 0.786724844638371
+      },
+      "t2": {
+        "lula": 83505,
+        "flavio": 219675,
+        "valid": 303180,
+        "pair": 27.54304373639422,
+        "raw": 27.54304373639422,
+        "electorate": 401540,
+        "turnout": 308597,
+        "abst": 92943,
+        "abst_pct": 23.14663545350401,
+        "blank": 2176,
+        "null": 3241,
+        "null_pct": 1.0502370405415478,
+        "blank_pct": 0.705126751070166
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/rr/rr-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/rr/rr-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 3.2022596766314138,
+        "raw_pp": 4.682916872212619,
+        "votos_lula": 9085,
+        "votos_flavio": -11647,
+        "abst_pp": 6.024492402455621,
+        "null_pp": -0.330588269280192,
+        "brancos_pp": -0.08159809356820502
+      }
+    },
+    {
+      "uf": "RS",
+      "nome": "Rio Grande do Sul",
+      "regiao": "Sul",
+      "t1": {
+        "lula": 2294759,
+        "flavio": 3573783,
+        "valid": 6423046,
+        "pair": 39.10271069032138,
+        "raw": 35.72695882919101,
+        "electorate": 8522545,
+        "turnout": 6702903,
+        "abst": 1819642,
+        "abst_pct": 21.350922758401392,
+        "blank": 148339,
+        "null": 131265,
+        "null_pct": 1.9583305919838017,
+        "blank_pct": 2.2130560445227987
+      },
+      "t2": {
+        "lula": 2824552,
+        "flavio": 3874378,
+        "valid": 6698930,
+        "pair": 42.16422622717359,
+        "raw": 42.16422622717359,
+        "electorate": 8522318,
+        "turnout": 6889638,
+        "abst": 1632680,
+        "abst_pct": 19.15769864489919,
+        "blank": 89463,
+        "null": 101245,
+        "null_pct": 1.469525684803759,
+        "blank_pct": 1.2985152485515203
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/rs/rs-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/rs/rs-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 3.0615155368522124,
+        "raw_pp": 6.4372673979825805,
+        "votos_lula": 529793,
+        "votos_flavio": 300595,
+        "abst_pp": -2.1932241135022004,
+        "null_pp": -0.48880490718004266,
+        "brancos_pp": -0.9145407959712784
+      }
+    },
+    {
+      "uf": "SC",
+      "nome": "Santa Catarina",
+      "regiao": "Sul",
+      "t1": {
+        "lula": 1127168,
+        "flavio": 3000020,
+        "valid": 4500897,
+        "pair": 27.310798538859874,
+        "raw": 25.04318583606779,
+        "electorate": 5734651,
+        "turnout": 4648159,
+        "abst": 1086492,
+        "abst_pct": 18.946087564875352,
+        "blank": 69007,
+        "null": 78071,
+        "null_pct": 1.6796112181188294,
+        "blank_pct": 1.4846092829440645
+      },
+      "t2": {
+        "lula": 1418314,
+        "flavio": 3220071,
+        "valid": 4638385,
+        "pair": 30.57775497290544,
+        "raw": 30.57775497290544,
+        "electorate": 5734687,
+        "turnout": 4762303,
+        "abst": 972384,
+        "abst_pct": 16.95618261293075,
+        "blank": 48674,
+        "null": 75244,
+        "null_pct": 1.5799918652803067,
+        "blank_pct": 1.0220685244093037
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/sc/sc-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/sc/sc-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 3.2669564340455644,
+        "raw_pp": 5.53456913683765,
+        "votos_lula": 291146,
+        "votos_flavio": 220051,
+        "abst_pp": -1.9899049519446024,
+        "null_pp": -0.09961935283852275,
+        "brancos_pp": -0.46254075853476073
+      }
+    },
+    {
+      "uf": "SE",
+      "nome": "Sergipe",
+      "regiao": "Nordeste",
+      "t1": {
+        "lula": 856019,
+        "flavio": 417839,
+        "valid": 1364196,
+        "pair": 67.19893426111858,
+        "raw": 62.748974487536984,
+        "electorate": 1740135,
+        "turnout": 1439082,
+        "abst": 301053,
+        "abst_pct": 17.300554267341326,
+        "blank": 24859,
+        "null": 49970,
+        "null_pct": 3.472352513616319,
+        "blank_pct": 1.7274206751248364
+      },
+      "t2": {
+        "lula": 989041,
+        "flavio": 433354,
+        "valid": 1422395,
+        "pair": 69.53349807894432,
+        "raw": 69.53349807894432,
+        "electorate": 1740093,
+        "turnout": 1466659,
+        "abst": 273434,
+        "abst_pct": 15.71375782788621,
+        "blank": 13135,
+        "null": 31129,
+        "null_pct": 2.1224429127697713,
+        "blank_pct": 0.895572863221785
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/se/se-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/se/se-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 2.334563817825739,
+        "raw_pp": 6.784523591407336,
+        "votos_lula": 133022,
+        "votos_flavio": 15515,
+        "abst_pp": -1.5867964394551155,
+        "null_pp": -1.3499096008465479,
+        "brancos_pp": -0.8318478119030515
+      }
+    },
+    {
+      "uf": "SP",
+      "nome": "São Paulo",
+      "regiao": "Sudeste",
+      "t1": {
+        "lula": 9505413,
+        "flavio": 12922023,
+        "valid": 24882948,
+        "pair": 42.38296789699901,
+        "raw": 38.200509843126305,
+        "electorate": 34122892,
+        "turnout": 26431992,
+        "abst": 7690900,
+        "abst_pct": 22.5388281860752,
+        "blank": 632801,
+        "null": 914888,
+        "null_pct": 3.461290393853025,
+        "blank_pct": 2.394072304501303
+      },
+      "t2": {
+        "lula": 12119274,
+        "flavio": 14139178,
+        "valid": 26258452,
+        "pair": 46.15380221195065,
+        "raw": 46.15380221195065,
+        "electorate": 34123591,
+        "turnout": 27364389,
+        "abst": 6759202,
+        "abst_pct": 19.808003208103155,
+        "blank": 389606,
+        "null": 716331,
+        "null_pct": 2.6177489290917477,
+        "blank_pct": 1.4237701415514887
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/sp/sp-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/sp/sp-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 3.7708343149516352,
+        "raw_pp": 7.953292368824343,
+        "votos_lula": 2613861,
+        "votos_flavio": 1217155,
+        "abst_pp": -2.730824977972045,
+        "null_pp": -0.8435414647612771,
+        "brancos_pp": -0.9703021629498141
+      }
+    },
+    {
+      "uf": "TO",
+      "nome": "Tocantins",
+      "regiao": "Norte",
+      "t1": {
+        "lula": 404009,
+        "flavio": 469321,
+        "valid": 930447,
+        "pair": 46.260749086828575,
+        "raw": 43.42095788368386,
+        "electorate": 1182023,
+        "turnout": 965196,
+        "abst": 216827,
+        "abst_pct": 18.34372089206386,
+        "blank": 8344,
+        "null": 26377,
+        "null_pct": 2.732812817293068,
+        "blank_pct": 0.8644876273834537
+      },
+      "t2": {
+        "lula": 442962,
+        "flavio": 467916,
+        "valid": 910878,
+        "pair": 48.63022270820022,
+        "raw": 48.63022270820022,
+        "electorate": 1182041,
+        "turnout": 954763,
+        "abst": 227278,
+        "abst_pct": 19.227590244331626,
+        "blank": 8059,
+        "null": 35826,
+        "null_pct": 3.752344822746587,
+        "blank_pct": 0.8440838197542218
+      },
+      "fontes": {
+        "t1": "https://resultados.tse.jus.br/oficial/ele2026/6257/dados/to/to-c0001-e006257-u.json",
+        "t2": "https://resultados.tse.jus.br/oficial/ele2026/6258/dados/to/to-c0001-e006258-u.json",
+        "replicacao": "https://urna360.com.br/turnos"
+      },
+      "mudanca": {
+        "pair_pp": 2.3694736213716467,
+        "raw_pp": 5.20926482451636,
+        "votos_lula": 38953,
+        "votos_flavio": -1405,
+        "abst_pp": 0.8838693522677659,
+        "null_pp": 1.0195320054535193,
+        "brancos_pp": -0.020403807629231996
+      }
+    }
+  ],
+  "regioes": [
+    {
+      "nome": "Norte",
+      "lula": 5024626,
+      "flavio": 5023547,
+      "pair_lula": 50.00536913526469,
+      "margem": 1079,
+      "valid": 10048173
+    },
+    {
+      "nome": "Nordeste",
+      "lula": 24450432,
+      "flavio": 10796736,
+      "pair_lula": 69.36850075444359,
+      "margem": 13653696,
+      "valid": 35247168
+    },
+    {
+      "nome": "Centro-Oeste",
+      "lula": 3733919,
+      "flavio": 5603867,
+      "pair_lula": 39.987198250206205,
+      "margem": -1869948,
+      "valid": 9337786
+    },
+    {
+      "nome": "Sudeste",
+      "lula": 24037731,
+      "flavio": 26844501,
+      "pair_lula": 47.24189575645974,
+      "margem": -2806770,
+      "valid": 50882232
+    },
+    {
+      "nome": "Sul",
+      "lula": 6809370,
+      "flavio": 11385893,
+      "pair_lula": 37.423861364356206,
+      "margem": -4576523,
+      "valid": 18195263
+    }
+  ],
+  "exterior": {
+    "lula": 200154,
+    "flavio": 171497
+  }
+}
