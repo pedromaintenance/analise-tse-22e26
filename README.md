@@ -1,66 +1,70 @@
-# Observatório Brasil 2026 — Eleições Presidenciais 2022–2026
+# Observatório Brasil 2026 | Engenharia de dados e visualização interativa
 
-Painel interativo e estudo exploratório de **dados eleitorais públicos**: curvas de apuração, resultados por unidade da federação, abstenção, votos brancos e nulos, e comparação entre os primeiros e segundos turnos de 2022 e 2026.
+Construí o **Observatório Brasil 2026** como um projeto pessoal de engenharia de dados, análise estatística e desenvolvimento web. Usei dados públicos das eleições presidenciais de 2022 e 2026 para trabalhar um problema que me interessa profissionalmente: **como transformar fontes diferentes, séries históricas incompletas e milhões de registros agregados em informação comparável, auditável e fácil de explorar**.
 
-> Projeto independente, **não vinculado ao TSE**. O painel descreve resultados observados e não atribui causalidade eleitoral a fatores políticos sem evidência adicional.
+Meu objetivo aqui não é discutir preferência eleitoral. O processo de apuração foi o estudo de caso. O produto é uma ferramenta analítica: da coleta e organização dos dados à modelagem, visualização e publicação.
 
-## Abrir o observatório
+## Acesse o projeto
 
-- **Navegador / GitHub Pages:** abra `index.html` pelo endereço do GitHub Pages após ativar Pages na branch `main` (pasta raiz).
-- **Versão offline:** no site, clique em **“↓ Baixar versão offline”**. Será produzido um único HTML, com gráficos, dados e imagem embutidos, que funciona sem internet.
-- **Reconstrução local:** `python tools/rebuild_standalone.py`. Também funciona offline depois do clone, sem dependências Python.
+- **[Abrir dashboard interativo](https://pedromaintenance.github.io/analise-tse-22e26/)**
+- **Versão offline:** no dashboard, use **“↓ Baixar versão offline”** para salvar um HTML autônomo, com visualizações e dados incorporados.
+- **Código e dados:** este repositório é público; deixei as fontes e as limitações documentadas para quem quiser estudar ou reproduzir a análise.
 
-O HTML integral foi dividido em 18 módulos em `payload/` para possibilitar a publicação confiável no GitHub. **Essa divisão não muda os dados nem o código do painel**: o loader concatena os arquivos na ordem original e permite baixar o HTML standalone íntegro.
+## O que desenvolvi
 
-## Conteúdo
+- Integração de dados eleitorais publicados em fontes diferentes, preservando sua procedência.
+- Modelagem de séries de apuração com diferentes frequências, formatos e precisões.
+- Comparação dos dois turnos de 2022 e 2026 e análise territorial das 27 unidades da federação.
+- Visualizações interativas de resultados finais, evolução da totalização, variações incrementais, comparecimento e votos inválidos.
+- Dashboard HTML/JavaScript com Plotly e rotina Python para reconstruir o arquivo standalone.
+- Experiência mobile com layout adaptativo e navegação por toque sem zoom acidental nos gráficos.
 
-- **Quatro pleitos:** 2022 primeiro turno, 2022 segundo turno, 2026 primeiro turno, 2026 segundo turno.
-- **Curvas nacionais:** participação de Lula normalizada entre dois finalistas, por proporção de seções totalizadas — não por tempo.
-- **Evolução 2026 primeiro turno:** 76 registros históricos do UOL, com percentuais arredondados; último ponto calculado a partir dos votos finais do TSE.
-- **Evolução 2026 segundo turno:** capturas próprias da apuração, registros recuperados no UOL e arquivos EA20 arquivados.
-- **27 UFs:** resultados finais, ganhos entre turnos, abstenção, brancos e nulos.
-- **Votos incrementais:** somente intervalos com votos absolutos conhecidos. Intervalos de comprimentos diferentes não são diretamente equivalentes.
-- **Comparação de bases:** resultados sobre todos os votos válidos e sobre somente os dois principais candidatos são medidas distintas.
+A principal dificuldade não foi desenhar gráficos. Foi **preservar o sentido dos dados ao compará-los**. Algumas séries têm votos absolutos conhecidos; outras têm percentuais arredondados; há intervalos sem registros. Optei por documentar essas diferenças, em vez de criar uma precisão que as fontes não oferecem.
 
-## Definições metodológicas
+## Como organizei o projeto
 
-- **Participação na dupla:** `100 × votos_Lula / (votos_Lula + votos_adversário)`. No primeiro turno, exclui os demais candidatos e *não* representa a porcentagem oficial de Lula entre todos os votos válidos.
-- **Participação oficial:** `100 × votos_Lula / todos_votos_válidos`.
-- **Votos incrementais:** `votos_candidato(t2) - votos_candidato(t1)` para dois snapshots de votos absolutos efetivamente registrados; lotes são de tamanho variável.
-- **Abstenção:** calculada usando eleitores aptos e comparecimento conforme a base disponibilizada no conjunto de dados; diferenças de universo eleitoral são documentadas.
-- **Curvas:** unem observações reais; *a linha entre dois pontos é apenas conexão visual*, não uma medição minuto a minuto.
-- **Fontes:** dados de terceiros podem conter arredondamento ou diferenças de sincronização; compare a documentação e o marcador de origem de cada ponto.
+| Caminho | O que você encontra |
+| --- | --- |
+| `index.html` | Carregador do dashboard publicado no GitHub Pages, incluindo ajustes mobile e apresentação editorial |
+| `payload/part-*.txt` | 18 partes do HTML completo, reunidas pelo carregador |
+| `dados/observatorio_2026_estaduais_curvas_v3.json` | Base estruturada utilizada no estudo |
+| `dados/apuracao_2026_1turno_serie_observada.csv` | Observações históricas do primeiro turno de 2026 |
+| `tools/rebuild_standalone.py` | Reconstrução do arquivo HTML original, sem dependências externas de Python |
+| `LICENSE` | Licença MIT do código autoral |
 
-## Resultados nacionais no arquivo
+No navegador, o carregador reúne os módulos, aplica os ajustes editoriais e responsivos e permite baixar a versão standalone atualizada. O script Python de reconstrução local monta o HTML original dos módulos, sem esses ajustes aplicados pelo carregador.
 
-| Pleito | Lula na base dos dois finalistas |
-| --- | ---: |
-| 2022 · 1º turno (vs. Jair) | 52,86% |
-| 2022 · 2º turno (vs. Jair) | 50,90% |
-| 2026 · 1º turno (vs. Flávio) | 48,99% |
-| 2026 · 2º turno (vs. Flávio) | 51,79% |
+## Critérios da análise
 
-Esses percentuais não devem ser interpretados como aprovação popular, nem permitem inferir transferências individuais de voto a partir de totais agregados.
+Trabalhei com **quatro pleitos** (primeiro e segundo turnos de 2022 e 2026). Para comparar situações diferentes, apresento separadamente:
 
-## Arquivos do repositório
+- **Participação entre os dois principais candidatos:** `100 × votos_Lula / (votos_Lula + votos_adversário)`. No primeiro turno, isso não representa o percentual oficial sobre todos os votos válidos.
+- **Participação sobre todos os votos válidos:** `100 × votos_Lula / total_votos_válidos`.
+- **Variação incremental:** diferença dos votos acumulados entre duas observações com contagens absolutas. Os intervalos não têm tamanhos iguais.
+- **Abstenção:** relação entre eleitores que não compareceram e eleitorado apto, respeitando a cobertura de cada fonte.
 
-- `index.html`: carregador web do painel.
-- `payload/part-*.txt`: os 18 segmentos exatos do HTML standalone.
-- `dados/observatorio_2026_estaduais_curvas_v3.json`: base completa usada nas análises.
-- `dados/apuracao_2026_1turno_serie_observada.csv`: observações publicadas do primeiro turno.
-- `tools/rebuild_standalone.py`: reconstrução local do HTML autônomo.
-- `.nojekyll`: compatibilidade com GitHub Pages.
+As curvas conectam **observações registradas**, não uma medição contínua de cada segundo da apuração. Também não utilizo resultados agregados para presumir transferência individual de voto, comportamento de eleitores ou causalidade política.
 
-## Fontes e auditoria
+**Exemplo de leitura:** a participação de Lula na base restrita aos dois finalistas é 52,86% (1º turno de 2022), 50,90% (2º turno de 2022), 48,99% (1º turno de 2026) e 51,79% (2º turno de 2026). Os dois percentuais de primeiro turno são normalizações analíticas, não o resultado oficial entre todos os candidatos.
 
-- [TSE — Divulgação de resultados 2026](https://www.tse.jus.br/eleicoes/eleicoes-2026-content/arquivos/divulgacao-de-resultados)
-- [TSE — Histórico da totalização](https://evolucao-totalizacao.tse.jus.br/)
-- [TSE — Resultados de 2022](https://www.tse.jus.br/comunicacao/noticias/2022/Outubro/100-das-secoes-totalizadas-confira-como-ficou-o-quadro-eleitoral-apos-o-2o-turno/)
-- [UOL — Apuração 2026](https://noticias.uol.com.br/eleicoes/2026/apuracao/)
-- [Arquivo de snapshots EA20](https://github.com/gabrielandr/apuracao-2026)
+## Fontes utilizadas
 
-A base JSON identifica origens, precisão e metadados das séries. O projeto usa Plotly, cuja licença está incorporada ao artefato original.
+- [TSE — divulgação de resultados de 2026](https://www.tse.jus.br/eleicoes/eleicoes-2026-content/arquivos/divulgacao-de-resultados)
+- [TSE — evolução da totalização](https://evolucao-totalizacao.tse.jus.br/)
+- [TSE — resultados de 2022](https://www.tse.jus.br/comunicacao/noticias/2022/Outubro/100-das-secoes-totalizadas-confira-como-ficou-o-quadro-eleitoral-apos-o-2o-turno/)
+- [UOL — histórico da apuração de 2026](https://noticias.uol.com.br/eleicoes/2026/apuracao/)
+- [Arquivo independente de snapshots EA20](https://github.com/gabrielandr/apuracao-2026)
 
-## Licença
+Identifico limitações de precisão, diferenças de sincronização e cobertura das fontes no material do dashboard e na base JSON.
 
-MIT para o código autoral, conforme `LICENSE`. Dados oficiais e conteúdo obtido de terceiros permanecem sujeitos a suas respectivas condições de uso.
+## Por que publiquei
+
+Trabalho com engenharia de manutenção, indicadores, dados e sistemas. Tenho interesse em desenvolver soluções que aproximem o dado bruto de decisões e investigações concretas. Neste projeto, apliquei essa prática em outro domínio para explorar integração, estatística, engenharia de visualização e desenvolvimento de aplicações.
+
+**Muda o conjunto de dados; permanece o trabalho de formular boas perguntas, construir indicadores consistentes e permitir que outras pessoas examinem os resultados.**
+
+Sugestões técnicas e contribuições são bem-vindas.
+
+---
+
+Projeto pessoal e independente, **sem vínculo institucional com o TSE**. Código autoral sob licença MIT. Dados públicos e conteúdos de terceiros mantêm suas próprias condições de uso. O Plotly está incorporado ao artefato com sua licença.
